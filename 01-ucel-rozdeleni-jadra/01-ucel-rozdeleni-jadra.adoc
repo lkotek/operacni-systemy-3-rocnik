@@ -1,5 +1,7 @@
 = Operační systémy -- účel, rozdělení, typy jader
 
+<<<
+
 == Co je to operační systém?
 
 == Rozdělení operačních systémů
@@ -20,9 +22,11 @@
 
 == Klíčové pojmy
 
-=== Použité zdroje
+== Použité zdroje
 
-=== Kam dál?
+== Kam dál?
+
+<<<
 
 (C) Lukáš Kotek, link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
 
