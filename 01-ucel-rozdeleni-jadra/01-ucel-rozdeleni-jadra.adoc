@@ -1,4 +1,4 @@
-= Operační systémy -- účel, rozdělení, typy jader
+= Operační systémy -- účel, rozdělení a typy jader
 :source-highlighter: coderay
 :listing-caption: Listing
 :icons: font

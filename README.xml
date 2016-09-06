@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Operační systémy (OSY)</title>
+<date>2016-09-06</date>
+</info>
+<preface>
+<title></title>
+<simpara>&#169; Lukáš Kotek <link xl:href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</link></simpara>
+<note>
+<simpara>Tento dokument nemá ambici v žádném slova smyslu suplovat technickou dokumentaci, odborné publikace nebo učebnice, které se komplexně zabývají problematikou operačních systémů a síťování. Je základní osnovou a rozcestníkem směřujícím na další materiály vytvořeným pro účely středoškolského předmětu <emphasis>Operační systémy</emphasis>. Předmět se zabývá problematikou operačních systémů obecně, základy správy MS Windows Serveru, posléze pak principy a použitím GNU/Linuxu, jeho konfigurací a nastavením jednotlivých síťových služeb.</simpara>
+</note>
+<simpara><?asciidoc-pagebreak?></simpara>
+</preface>
+<chapter xml:id="_podklady">
+<title>Podklady</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Operační systémy&#8201;&#8212;&#8201;účel, rozdělení a typy jader [<link xl:href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.html">html</link>] [<link xl:href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.pdf">pdf</link>] [<link xl:href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.adoc">asciidoc</link>]</simpara>
+</listitem>
+<listitem>
+<simpara>TO DO :-)</simpara>
+</listitem>
+</orderedlist>
+</chapter>
+</book>

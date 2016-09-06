@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Operační systémy&#8201;&#8212;&#8201;účel, rozdělení a typy jader</title>
+<date>2016-09-06</date>
+</info>
+<preface>
+<title></title>
+<simpara>&#169; Lukáš Kotek, <link xl:href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</link></simpara>
+<simpara><?asciidoc-pagebreak?></simpara>
+</preface>
+<chapter xml:id="_co_je_to_operační_systém">
+<title>Co je to operační systém?</title>
+
+</chapter>
+<chapter xml:id="_rozdělení_operačních_systémů">
+<title>Rozdělení operačních systémů</title>
+<section xml:id="_podle">
+<title>Podle</title>
+
+</section>
+<section xml:id="_podle_2">
+<title>Podle</title>
+
+</section>
+<section xml:id="_podle_3">
+<title>Podle</title>
+
+</section>
+<section xml:id="_další_hlediska">
+<title>Další hlediska?</title>
+
+</section>
+</chapter>
+<chapter xml:id="_složení_operačního_systému">
+<title>Složení operačního systému</title>
+<section xml:id="_jádro">
+<title>Jádro</title>
+
+</section>
+<section xml:id="_knihovny">
+<title>Knihovny</title>
+
+</section>
+<section xml:id="_aplikační_software">
+<title>Aplikační software</title>
+
+</section>
+</chapter>
+<chapter xml:id="_druhy_jader_operačního_systému">
+<title>Druhy jader operačního systému</title>
+<section xml:id="_monolitický_kernel">
+<title>Monolitický kernel</title>
+
+</section>
+<section xml:id="_jádra_na_bázi_mikrokernelu">
+<title>Jádra na bázi mikrokernelu</title>
+
+</section>
+<section xml:id="_hybridní_jádro">
+<title>Hybridní jádro</title>
+
+</section>
+</chapter>
+<chapter xml:id="_klíčové_pojmy">
+<title>Klíčové pojmy</title>
+
+</chapter>
+<chapter xml:id="_použité_zdroje">
+<title>Použité zdroje</title>
+
+</chapter>
+<chapter xml:id="_kam_dál">
+<title>Kam dál?</title>
+<simpara><?asciidoc-hr?></simpara>
+<itemizedlist>
+<listitem>
+<simpara>Přehled kapitol: [<link xl:href="../README.html">html</link>] [<link xl:href="../README.pdf">pdf</link>] [<link xl:href="../README.asciidoc">asciidoc</link>]</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+</book>
