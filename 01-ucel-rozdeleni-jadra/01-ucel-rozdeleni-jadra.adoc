@@ -35,5 +35,5 @@
 
 ---
 
-- Přehled kapitol: [link:../README.html[html]] [link:../README.md[asciidoc]]
+- Přehled kapitol: [link:../README.html[html]] [link:../README.pdf[pdf]] [link:../README.asciidoc[asciidoc]]
 

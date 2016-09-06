@@ -1,0 +1,20 @@
+= Operační systémy -- servery (OSC)
+:source-highlighter: coderay
+:listing-caption: Listing
+:pdf-page-size: A4
+:icons: font
+
+(C) Lukáš Kotek link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
+
+NOTE: Tento dokument nemá ambici v žádném slova smyslu suplovat technickou dokumentaci, odborné publikace nebo učebnice, které se komplexně zabývají problematikou operačních systémů a síťování. Je základní osnovou a rozcestníkem směřujícím na další materiály vytvořeným pro účely středoškolského předmětu _Operační systémy_, konkrétně části cvičení zabývající se problematikou serverů a s tím souvisejících vybraných síťových služeb.
+
+<<<
+
+== Cíl předmětu
+
+== Podklady
+
+. MS Windows Server -- licencování, role a použití [link:01-windows-server-licence-role/01-windows-server-licence-role.html[html]] [link:01-windows-server-licence-role/01-windows-server-licence-role.pdf[pdf]] [link:01-windows-server-licence-role/01-windows-server-licence-role.adoc[asciidoc]]
+
+. TO DO :-)
+
