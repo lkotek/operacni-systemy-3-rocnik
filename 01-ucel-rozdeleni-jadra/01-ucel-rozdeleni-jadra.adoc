@@ -1,4 +1,9 @@
 = Operační systémy -- účel, rozdělení, typy jader
+:source-highlighter: coderay
+:listing-caption: Listing
+:icons: font
+
+(C) Lukáš Kotek, link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
 
 <<<
 
@@ -26,7 +31,9 @@
 
 == Kam dál?
 
-<<<
 
-(C) Lukáš Kotek, link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
+
+---
+
+- Přehled kapitol: [link:../README.html[html]] [link:../README.md[asciidoc]]
 

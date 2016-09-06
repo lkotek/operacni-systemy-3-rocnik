@@ -1,4 +1,4 @@
-= Práce s textem, vstupy, výstupy a editory
+= Šablona
 :source-highlighter: coderay
 :listing-caption: Listing
 :pdf-page-size: A4
