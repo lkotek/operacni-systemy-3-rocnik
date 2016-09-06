@@ -1,1 +1,28 @@
-# Pokus :-)
+= Operační systémy -- účel, rozdělení, typy jader
+
+== Co je to operační systém?
+
+== Rozdělení operačních systémů
+=== Podle
+=== Podle
+=== Podle
+=== Další hlediska?
+
+== Složení operačního systému
+=== Jádro
+=== Knihovny
+=== Aplikační software
+
+== Druhy jader operačního systému
+=== Monolitický kernel
+=== Jádra na bázi mikrokernelu
+=== Hybridní jádro
+
+== Klíčové pojmy
+
+=== Použité zdroje
+
+=== Kam dál?
+
+(C) Lukáš Kotek, link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
+
