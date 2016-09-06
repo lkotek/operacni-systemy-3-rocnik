@@ -8,12 +8,30 @@
 <<<
 
 == Co je to operační systém?
+=== Definice
+
+=== Funkce operačního systému
+* Organizuje a řídí přístup k hardwarovým prostředkům
+** Abstrakce hardwarových prostředků 
++
+TIP: Jeden příklad za všechny: Program, chce-li tisknout, nepřistupuje přímo k tiskárně, ale požádá operační systém o přítup -- ten, protože k tiskárně má ovladač, je schopen požadavku vyhovět.
++
+
+** Přístup k adresářům a jednotlivým souborům
+
+* Organizuje a řídí jednotlivé zpracovávané procesy
+** Přidělování paměti, procesorového času, určování priorit vykonávání procesů
+
+* Komunikace s uživatelem (ovládání)
+** *GUI* (**G**raphical **U**ser Interface) × *CLI* (**C**ommand **L**ine **I**nterface)
 
 == Rozdělení operačních systémů
-=== Podle
-=== Podle
-=== Podle
-=== Další hlediska?
+=== Jednouživatelský × víceuživatelský
+=== Jednoúlohové × víceúlohové
+=== Síťové × nesíťové
+=== OS pracující v reálném čase
+
+WARNING: Jaká jsou další možná členění? Příklady konkrétních operačních systémů?
 
 == Složení operačního systému
 === Jádro

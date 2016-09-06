@@ -13,25 +13,65 @@
 </preface>
 <chapter xml:id="_co_je_to_operační_systém">
 <title>Co je to operační systém?</title>
+<section xml:id="_definice">
+<title>Definice</title>
 
+</section>
+<section xml:id="_funkce_operačního_systému">
+<title>Funkce operačního systému</title>
+<itemizedlist>
+<listitem>
+<simpara>Organizuje a řídí přístup k hardwarovým prostředkům</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Abstrakce hardwarových prostředků</simpara>
+<tip>
+<simpara>Jeden příklad za všechny: Program, chce-li tisknout, nepřistupuje přímo k tiskárně, ale požádá operační systém o přítup&#8201;&#8212;&#8201;ten, protože k tiskárně má ovladač, je schopen požadavku vyhovět.</simpara>
+</tip>
+</listitem>
+<listitem>
+<simpara>Přístup k adresářům a jednotlivým souborům</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Organizuje a řídí jednotlivé zpracovávané procesy</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Přidělování paměti, procesorového času, určování priorit vykonávání procesů</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Komunikace s uživatelem (ovládání)</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">GUI</emphasis> (<emphasis role="strong">G</emphasis>raphical <emphasis role="strong">U</emphasis>ser Interface) × <emphasis role="strong">CLI</emphasis> (<emphasis role="strong">C</emphasis>ommand <emphasis role="strong">L</emphasis>ine <emphasis role="strong">I</emphasis>nterface)</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</section>
 </chapter>
 <chapter xml:id="_rozdělení_operačních_systémů">
 <title>Rozdělení operačních systémů</title>
-<section xml:id="_podle">
-<title>Podle</title>
+<section xml:id="_jednouživatelský_víceuživatelský">
+<title>Jednouživatelský × víceuživatelský</title>
 
 </section>
-<section xml:id="_podle_2">
-<title>Podle</title>
+<section xml:id="_jednoúlohové_víceúlohové">
+<title>Jednoúlohové × víceúlohové</title>
 
 </section>
-<section xml:id="_podle_3">
-<title>Podle</title>
+<section xml:id="_síťové_nesíťové">
+<title>Síťové × nesíťové</title>
 
 </section>
-<section xml:id="_další_hlediska">
-<title>Další hlediska?</title>
-
+<section xml:id="_os_pracující_v_reálném_čase">
+<title>OS pracující v reálném čase</title>
+<warning>
+<simpara>Jaká jsou další možná členění? Příklady konkrétních operačních systémů?</simpara>
+</warning>
 </section>
 </chapter>
 <chapter xml:id="_složení_operačního_systému">
