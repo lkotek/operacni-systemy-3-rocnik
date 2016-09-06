@@ -15,19 +15,30 @@
 <title>Co je to operační systém?</title>
 <section xml:id="_definice">
 <title>Definice</title>
-
+<blockquote>
+<attribution>
+<link xl:href="http://home.zcu.cz/~sberanov/">Zdroj: zcu.cz</link>
+</attribution>
+<simpara>"Operační systém je v informatice základní programové vybavení počítače (tj. software), které je zavedeno do paměti počítače při jeho startu a zůstává v činnosti až do jeho vypnutí. Skládá se z jádra (kernel) a pomocných systémových nástrojů. Hlavním úkolem operačního systému je zajistit uživateli možnost ovládat počítač, vytvořit pro procesy stabilní aplikační rozhraní (API) a přidělovat jim systémové zdroje."</simpara>
+</blockquote>
+<blockquote>
+<attribution>
+<link xl:href="https://wikisofia.cz/wiki/Opera%C4%8Dn%C3%AD_syst%C3%A9m#cite_note-nkpOS-3">Zdroj: wikisofia.cz</link>
+</attribution>
+<simpara>"Základní obslužný a řídící program počítače zajišťující mj. komunikaci jeho hardwarové a softwarové složky. Operační systém převádí příkazy zadané uživatelem ve vyšších programovacích jazycích na instrukce srozumitelné procesoru a slouží ke správě počítače a uživatelských aplikací. Mezi operační systémy patří např. MS-DOS, Windows, Unix a Linux."</simpara>
+</blockquote>
 </section>
 <section xml:id="_funkce_operačního_systému">
 <title>Funkce operačního systému</title>
 <itemizedlist>
 <listitem>
-<simpara>Organizuje a řídí přístup k hardwarovým prostředkům</simpara>
+<simpara>Organizuje a řídí <emphasis role="strong">přístup k hardwarovým prostředkům</emphasis></simpara>
 <itemizedlist>
 <listitem>
 <simpara>Abstrakce hardwarových prostředků</simpara>
-<tip>
-<simpara>Jeden příklad za všechny: Program, chce-li tisknout, nepřistupuje přímo k tiskárně, ale požádá operační systém o přítup&#8201;&#8212;&#8201;ten, protože k tiskárně má ovladač, je schopen požadavku vyhovět.</simpara>
-</tip>
+<note>
+<simpara>Jeden příklad za všechny: Aplikace, chce-li tisknout, nepřistupuje přímo k tiskárně, ale požádá operační systém o přítup&#8201;&#8212;&#8201;ten, protože k tiskárně má ovladač, je schopen požadavku vyhovět.</simpara>
+</note>
 </listitem>
 <listitem>
 <simpara>Přístup k adresářům a jednotlivým souborům</simpara>
@@ -35,10 +46,13 @@
 </itemizedlist>
 </listitem>
 <listitem>
-<simpara>Organizuje a řídí jednotlivé zpracovávané procesy</simpara>
+<simpara>Organizuje a <emphasis role="strong">řídí jednotlivé zpracovávané procesy</emphasis></simpara>
 <itemizedlist>
 <listitem>
 <simpara>Přidělování paměti, procesorového času, určování priorit vykonávání procesů</simpara>
+<tip>
+<simpara>Komponenta, která je součástí jádra OS a jež je za to zodpovědná, se nazývá <emphasis role="strong">"plánovač"</emphasis>.</simpara>
+</tip>
 </listitem>
 </itemizedlist>
 </listitem>
@@ -57,18 +71,31 @@
 <title>Rozdělení operačních systémů</title>
 <section xml:id="_jednouživatelský_víceuživatelský">
 <title>Jednouživatelský × víceuživatelský</title>
-
+<simpara>Určuje schopnost operačního systému zohledit při výkonu své funkce, který konkrétní uživatel systém používá.</simpara>
+<note>
+<simpara>Klasickým případem je zohlednění uživatele při přístupu k datům na diskovém oddílu. Pokud ne každý má přístup ke všem umístěním, je pravděpodobné, že se jedná o víceuživatelský operační systém. Pokud dovoluje různým uživatelům vykonávat různé operace, opět to svědčí o jeho víceuživatelském pojetí.</simpara>
+</note>
 </section>
 <section xml:id="_jednoúlohové_víceúlohové">
 <title>Jednoúlohové × víceúlohové</title>
-
+<simpara>Stanovuje, zda operační <emphasis role="strong">systém může v jeden okamžik vykonávat více úloh</emphasis>. Bavíme se o tzv. "multitaskingu".</simpara>
+<warning>
+<simpara>Jak je to řešeno u jednojádrových procesorů?</simpara>
+</warning>
 </section>
 <section xml:id="_síťové_nesíťové">
 <title>Síťové × nesíťové</title>
-
+<simpara>Operační systémy, které poskytují (nebo naopak) nějaké <emphasis role="strong">služby v rámci počítačové sítě</emphasis>.</simpara>
+<tip>
+<simpara>Služba v rámci počítačové sítě může poskytovat např. síťové přihlašování a cestovní profily, funkce DNS serveru, přidělování IP adres pomocí DHCP nebo i sdílení souborů.</simpara>
+</tip>
 </section>
-<section xml:id="_os_pracující_v_reálném_čase">
-<title>OS pracující v reálném čase</title>
+<section xml:id="_operační_systémy_pracující_v_reálném_čase">
+<title>Operační systémy pracující v reálném čase</title>
+<simpara>Operační systémy, jejichž odezva při vykonání úkonů je minimální a jasně předem definovaná.</simpara>
+<tip>
+<simpara>Využití u řízení technologický operací v průmyslu, družic, chytrých aut a obecně tam, kde je <emphasis role="strong">nezbytné přesné časování</emphasis>.</simpara>
+</tip>
 <warning>
 <simpara>Jaká jsou další možná členění? Příklady konkrétních operačních systémů?</simpara>
 </warning>
@@ -78,42 +105,195 @@
 <title>Složení operačního systému</title>
 <section xml:id="_jádro">
 <title>Jádro</title>
-
+<simpara>Nebo také "kernel". Jedná se o základní část operačního systému, řeší práci s hardwarem, <emphasis role="strong">přidělováním hardwarových zdrojů</emphasis> (procesorový čas, paměť, síťování, přístup k souborovým systémům apod.).</simpara>
+<note>
+<simpara>Jádra se týká i už zmíněný plánovač. Stejně tak jádro (v závislosti typu) řeší ovladače hardwaru.</simpara>
+</note>
+<figure>
+<title>Schéma operačního systému, autor: Pavouk, licence: CC-BY-SA</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kernel-schema.png"/>
+</imageobject>
+<textobject><phrase>kernel schema</phrase></textobject>
+</mediaobject>
+</figure>
+<warning>
+<simpara>V čem tkví problematika kernel a userspace?</simpara>
+</warning>
 </section>
-<section xml:id="_knihovny">
-<title>Knihovny</title>
-
+<section xml:id="_knihovny_a_frameworky">
+<title>Knihovny a frameworky</title>
+<simpara><emphasis role="strong">Zprostředkovávají různou funkcionalitu operačního systému</emphasis> (práce se soubory, grafické uživatelské rozhraní, matematické funkce apod.).</simpara>
+<tip>
+<simpara>I když je samozřejmě teoreticky možné programovat vše přímo, je příjemnější si nechat práci usnadnit. (Proto máme GTK nebo WindowsForms pro vykreslování oken, proto vykreslujeme 3D grafiku pomocí OpenGL či DirectX.) I sám operační systém tak <emphasis role="strong">obsahuje značnou sadu funkcí zpřístupněných přes API</emphasis> nebo systémová volání.</simpara>
+</tip>
 </section>
 <section xml:id="_aplikační_software">
 <title>Aplikační software</title>
-
+<simpara>Systémové utility (např. pro vstup a výstup od uživatele, formátování disku, nastavení práv, práce se soubory&#8201;&#8212;&#8201;kopírování, shell apod.).</simpara>
+<important>
+<simpara>Výše popsané je pouze jedno z mnoha možných členění.</simpara>
+</important>
 </section>
+</chapter>
+<chapter xml:id="_základní_termíny">
+<title>Základní termíny</title>
+<variablelist>
+<varlistentry>
+<term>Proces</term>
+<listitem>
+<simpara>Spuštěný program vykonávaný procesorem.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Vlákno (thread)</term>
+<listitem>
+<simpara>Jednoduchý proces vykonávaný na procesoru. Ale pozor&#8201;&#8212;&#8201;jeden proces se může skládat z více vláken! Vlákna pak ale stále sdílí paměťový prostor procesu.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Ovladač hardware (zařízení)</term>
+<listitem>
+<simpara>Umožňuje operačnímu systému pracovat s konkrétním hardwarem (grafické karty, tiskárny apod.).</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Systémové volání (system call)</term>
+<listitem>
+<simpara>Přímý způsob volání služeb jádra. Typický přístup u monolitických jader (např. GNU/Linux, MS DOS).</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Application Programming Interface (API)</term>
+<listitem>
+<simpara>Sada funkcí využívaných pro zpřístupnění funkcionality software (např. právě jádra OS nebo pro různé frameworky, viz např. již zmíněné OpenGL). Typické u mikrojader a hybridních jader (MS Windows, macOS, Minix).</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
 </chapter>
 <chapter xml:id="_druhy_jader_operačního_systému">
 <title>Druhy jader operačního systému</title>
 <section xml:id="_monolitický_kernel">
 <title>Monolitický kernel</title>
-
+<simpara>Celé jádro <emphasis role="strong">sdílí stejný paměťový prostor</emphasis> (všechny služby OS, včetně ovladačů).</simpara>
+<tip>
+<simpara>Z čehož plyne, že špatně napsaná aplikace může pracovat s paměťovým prostorem, který jí nepřísluší a negativně tak ovlivnit chod celého systému.</simpara>
+</tip>
+<itemizedlist>
+<listitem>
+<simpara>Typicky používá systémová volání</simpara>
+</listitem>
+<listitem>
+<simpara>Relativní <emphasis role="strong">náchylnost k chybám</emphasis></simpara>
+</listitem>
+<listitem>
+<simpara>Vysoký výkon díky nízké režii</simpara>
+</listitem>
+</itemizedlist>
+<note>
+<simpara>Typickými příklady jsou např. MS DOS a GNU/Linux (který však obchází mnoho nevýhod monolitických jader svou modularitou).</simpara>
+</note>
+<figure>
+<title>Monolitický kernel, licence: public domain</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="monolit.png"/>
+</imageobject>
+<textobject><phrase>monolit</phrase></textobject>
+</mediaobject>
+</figure>
 </section>
-<section xml:id="_jádra_na_bázi_mikrokernelu">
-<title>Jádra na bázi mikrokernelu</title>
-
+<section xml:id="_jádro_na_bázi_mikrokernelu">
+<title>Jádro na bázi mikrokernelu</title>
+<simpara><emphasis role="strong">Model klient-server</emphasis>, služby operačního systému jsou oddělené (na tzv. jednotlivé "servery"), mikrojádro pak řeší pouze zcela základní funkce, režii a komunikaci mezi nimi.</simpara>
+<tip>
+<simpara>Co je to server? Např. služba zodpovědná za funkční síťování. A dojde-li k pádu takové služby..? Přijdete pouze o její funkčnost a mikrojádro se ji mezitím pokusí restartovat.</simpara>
+</tip>
+<itemizedlist>
+<listitem>
+<simpara>Používá se API</simpara>
+</listitem>
+<listitem>
+<simpara>Větší režie může být výkonově náročná, ale vede k <emphasis role="strong">větší stabilitě</emphasis> daného systému</simpara>
+</listitem>
+</itemizedlist>
+<note>
+<simpara>Mezi dané OS patří např. Minix (výukový unixový OS) a Symbian.</simpara>
+</note>
+<figure>
+<title>Mikrokernel, licence: public domain</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mikro.png"/>
+</imageobject>
+<textobject><phrase>mikro</phrase></textobject>
+</mediaobject>
+</figure>
 </section>
 <section xml:id="_hybridní_jádro">
 <title>Hybridní jádro</title>
-
+<simpara><emphasis role="strong">Kombinuje oba přístupy</emphasis> (mikrokernel s některými vlastnostmi monolitického jádra).</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Optimální řešení z hlediska výkonu a stability</simpara>
+</listitem>
+</itemizedlist>
+<note>
+<simpara>Podstatná část dnešních OS, např. MS Windows NT, MS Windows 2000 a novější.</simpara>
+</note>
+<figure>
+<title>Hybridní jádro, licence: public domain</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mikro.png"/>
+</imageobject>
+<textobject><phrase>mikro</phrase></textobject>
+</mediaobject>
+</figure>
 </section>
 </chapter>
 <chapter xml:id="_klíčové_pojmy">
 <title>Klíčové pojmy</title>
-
+<simpara>operační systém, jádro, kernel, multitasking, abstrakce hardwarových prostředků, jednouživatelský a víceuživatelský systém, knihovna, proces, vlákno, application programming interface, monolitický kernel, mikrokernel, hybridní jádro</simpara>
 </chapter>
 <chapter xml:id="_použité_zdroje">
 <title>Použité zdroje</title>
-
+<orderedlist numeration="arabic">
+<listitem>
+<simpara><link xl:href="http://www.abclinuxu.cz/ucebnice/zaklady/zakladni-soucasti-systemu/slozeni-os">http://www.abclinuxu.cz/ucebnice/zaklady/zakladni-soucasti-systemu/slozeni-os</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.gjszlin.cz/ivt/esf/ostatni-sin/operacni-systemy-1.php">http://www.gjszlin.cz/ivt/esf/ostatni-sin/operacni-systemy-1.php</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://marlib.cmsps.cz/os/os.html">http://marlib.cmsps.cz/os/os.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.nti.tul.cz/~kolar/os/os-s.pdf">http://www.nti.tul.cz/~kolar/os/os-s.pdf</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="https://cs.wikipedia.org/wiki/J%C3%A1dro_opera%C4%8Dn%C3%ADho_syst%C3%A9mu">https://cs.wikipedia.org/wiki/J%C3%A1dro_opera%C4%8Dn%C3%ADho_syst%C3%A9mu</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://foldoc.org/Application%20Program%20Interface">http://foldoc.org/Application%20Program%20Interface</link></simpara>
+</listitem>
+</orderedlist>
 </chapter>
 <chapter xml:id="_kam_dál">
 <title>Kam dál?</title>
+<itemizedlist>
+<title>Perfektní web jdoucí více do hloubky:</title>
+<listitem>
+<simpara><link xl:href="http://www.abclinuxu.cz/ucebnice/zaklady">http://www.abclinuxu.cz/ucebnice/zaklady</link></simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<title>Něco málo z historie (perfektně napsáno):</title>
+<listitem>
+<simpara><link xl:href="http://switch2mac.blog.zive.cz/2011/11/jak-rozevrit-okna-dokoran/">http://switch2mac.blog.zive.cz/2011/11/jak-rozevrit-okna-dokoran/</link></simpara>
+</listitem>
+</itemizedlist>
 <simpara><?asciidoc-hr?></simpara>
 <itemizedlist>
 <listitem>

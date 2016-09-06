@@ -527,26 +527,45 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_definice">Definice</h3>
-
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>"Operační systém je v informatice základní programové vybavení počítače (tj. software), které je zavedeno do paměti počítače při jeho startu a zůstává v činnosti až do jeho vypnutí. Skládá se z jádra (kernel) a pomocných systémových nástrojů. Hlavním úkolem operačního systému je zajistit uživateli možnost ovládat počítač, vytvořit pro procesy stabilní aplikační rozhraní (API) a přidělovat jim systémové zdroje."</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; <a href="http://home.zcu.cz/~sberanov/">Zdroj: zcu.cz</a>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>"Základní obslužný a řídící program počítače zajišťující mj. komunikaci jeho hardwarové a softwarové složky. Operační systém převádí příkazy zadané uživatelem ve vyšších programovacích jazycích na instrukce srozumitelné procesoru a slouží ke správě počítače a uživatelských aplikací. Mezi operační systémy patří např. MS-DOS, Windows, Unix a Linux."</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; <a href="https://wikisofia.cz/wiki/Opera%C4%8Dn%C3%AD_syst%C3%A9m#cite_note-nkpOS-3">Zdroj: wikisofia.cz</a>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_funkce_operačního_systému">Funkce operačního systému</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Organizuje a řídí přístup k hardwarovým prostředkům</p>
+<p>Organizuje a řídí <strong>přístup k hardwarovým prostředkům</strong></p>
 <div class="ulist">
 <ul>
 <li>
 <p>Abstrakce hardwarových prostředků</p>
-<div class="admonitionblock tip">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Jeden příklad za všechny: Program, chce-li tisknout, nepřistupuje přímo k tiskárně, ale požádá operační systém o přítup&#8201;&#8212;&#8201;ten, protože k tiskárně má ovladač, je schopen požadavku vyhovět.
+Jeden příklad za všechny: Aplikace, chce-li tisknout, nepřistupuje přímo k tiskárně, ale požádá operační systém o přítup&#8201;&#8212;&#8201;ten, protože k tiskárně má ovladač, je schopen požadavku vyhovět.
 </td>
 </tr>
 </table>
@@ -559,11 +578,23 @@ Jeden příklad za všechny: Program, chce-li tisknout, nepřistupuje přímo k 
 </div>
 </li>
 <li>
-<p>Organizuje a řídí jednotlivé zpracovávané procesy</p>
+<p>Organizuje a <strong>řídí jednotlivé zpracovávané procesy</strong></p>
 <div class="ulist">
 <ul>
 <li>
 <p>Přidělování paměti, procesorového času, určování priorit vykonávání procesů</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Komponenta, která je součástí jádra OS a jež je za to zodpovědná, se nazývá <strong>"plánovač"</strong>.
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ul>
 </div>
@@ -588,18 +619,75 @@ Jeden příklad za všechny: Program, chce-li tisknout, nepřistupuje přímo k 
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_jednouživatelský_víceuživatelský">Jednouživatelský × víceuživatelský</h3>
-
+<div class="paragraph">
+<p>Určuje schopnost operačního systému zohledit při výkonu své funkce, který konkrétní uživatel systém používá.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Klasickým případem je zohlednění uživatele při přístupu k datům na diskovém oddílu. Pokud ne každý má přístup ke všem umístěním, je pravděpodobné, že se jedná o víceuživatelský operační systém. Pokud dovoluje různým uživatelům vykonávat různé operace, opět to svědčí o jeho víceuživatelském pojetí.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_jednoúlohové_víceúlohové">Jednoúlohové × víceúlohové</h3>
-
+<div class="paragraph">
+<p>Stanovuje, zda operační <strong>systém může v jeden okamžik vykonávat více úloh</strong>. Bavíme se o tzv. "multitaskingu".</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Jak je to řešeno u jednojádrových procesorů?
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_síťové_nesíťové">Síťové × nesíťové</h3>
-
+<div class="paragraph">
+<p>Operační systémy, které poskytují (nebo naopak) nějaké <strong>služby v rámci počítačové sítě</strong>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Služba v rámci počítačové sítě může poskytovat např. síťové přihlašování a cestovní profily, funkce DNS serveru, přidělování IP adres pomocí DHCP nebo i sdílení souborů.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_os_pracující_v_reálném_čase">OS pracující v reálném čase</h3>
+<h3 id="_operační_systémy_pracující_v_reálném_čase">Operační systémy pracující v reálném čase</h3>
+<div class="paragraph">
+<p>Operační systémy, jejichž odezva při vykonání úkonů je minimální a jasně předem definovaná.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Využití u řízení technologický operací v průmyslu, družic, chytrých aut a obecně tam, kde je <strong>nezbytné přesné časování</strong>.
+</td>
+</tr>
+</table>
+</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -620,15 +708,104 @@ Jaká jsou další možná členění? Příklady konkrétních operačních sys
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_jádro">Jádro</h3>
-
+<div class="paragraph">
+<p>Nebo také "kernel". Jedná se o základní část operačního systému, řeší práci s hardwarem, <strong>přidělováním hardwarových zdrojů</strong> (procesorový čas, paměť, síťování, přístup k souborovým systémům apod.).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Jádra se týká i už zmíněný plánovač. Stejně tak jádro (v závislosti typu) řeší ovladače hardwaru.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href=""https://cs.wikipedia.org/wiki/Soubor:Kernel_Layout_cs.svg"><img src="kernel-schema.png" alt="kernel schema"></a>
+</div>
+<div class="title">Obrázek 1: Schéma operačního systému, autor: Pavouk, licence: CC-BY-SA</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+V čem tkví problematika kernel a userspace?
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_knihovny">Knihovny</h3>
-
+<h3 id="_knihovny_a_frameworky">Knihovny a frameworky</h3>
+<div class="paragraph">
+<p><strong>Zprostředkovávají různou funkcionalitu operačního systému</strong> (práce se soubory, grafické uživatelské rozhraní, matematické funkce apod.).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+I když je samozřejmě teoreticky možné programovat vše přímo, je příjemnější si nechat práci usnadnit. (Proto máme GTK nebo WindowsForms pro vykreslování oken, proto vykreslujeme 3D grafiku pomocí OpenGL či DirectX.) I sám operační systém tak <strong>obsahuje značnou sadu funkcí zpřístupněných přes API</strong> nebo systémová volání.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_aplikační_software">Aplikační software</h3>
-
+<div class="paragraph">
+<p>Systémové utility (např. pro vstup a výstup od uživatele, formátování disku, nastavení práv, práce se soubory&#8201;&#8212;&#8201;kopírování, shell apod.).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Výše popsané je pouze jedno z mnoha možných členění.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_základní_termíny">Základní termíny</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Proces</dt>
+<dd>
+<p>Spuštěný program vykonávaný procesorem.</p>
+</dd>
+<dt class="hdlist1">Vlákno (thread)</dt>
+<dd>
+<p>Jednoduchý proces vykonávaný na procesoru. Ale pozor&#8201;&#8212;&#8201;jeden proces se může skládat z více vláken! Vlákna pak ale stále sdílí paměťový prostor procesu.</p>
+</dd>
+<dt class="hdlist1">Ovladač hardware (zařízení)</dt>
+<dd>
+<p>Umožňuje operačnímu systému pracovat s konkrétním hardwarem (grafické karty, tiskárny apod.).</p>
+</dd>
+<dt class="hdlist1">Systémové volání (system call)</dt>
+<dd>
+<p>Přímý způsob volání služeb jádra. Typický přístup u monolitických jader (např. GNU/Linux, MS DOS).</p>
+</dd>
+<dt class="hdlist1">Application Programming Interface (API)</dt>
+<dd>
+<p>Sada funkcí využívaných pro zpřístupnění funkcionality software (např. právě jádra OS nebo pro různé frameworky, viz např. již zmíněné OpenGL). Typické u mikrojader a hybridních jader (MS Windows, macOS, Minix).</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -637,33 +814,186 @@ Jaká jsou další možná členění? Příklady konkrétních operačních sys
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_monolitický_kernel">Monolitický kernel</h3>
-
+<div class="paragraph">
+<p>Celé jádro <strong>sdílí stejný paměťový prostor</strong> (všechny služby OS, včetně ovladačů).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Z čehož plyne, že špatně napsaná aplikace může pracovat s paměťovým prostorem, který jí nepřísluší a negativně tak ovlivnit chod celého systému.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Typicky používá systémová volání</p>
+</li>
+<li>
+<p>Relativní <strong>náchylnost k chybám</strong></p>
+</li>
+<li>
+<p>Vysoký výkon díky nízké režii</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Typickými příklady jsou např. MS DOS a GNU/Linux (který však obchází mnoho nevýhod monolitických jader svou modularitou).
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href=""https://commons.wikimedia.org/wiki/File:Kernel-monolithic.svg"><img src="monolit.png" alt="monolit"></a>
+</div>
+<div class="title">Obrázek 2: Monolitický kernel, licence: public domain</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_jádra_na_bázi_mikrokernelu">Jádra na bázi mikrokernelu</h3>
-
+<h3 id="_jádro_na_bázi_mikrokernelu">Jádro na bázi mikrokernelu</h3>
+<div class="paragraph">
+<p><strong>Model klient-server</strong>, služby operačního systému jsou oddělené (na tzv. jednotlivé "servery"), mikrojádro pak řeší pouze zcela základní funkce, režii a komunikaci mezi nimi.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Co je to server? Např. služba zodpovědná za funkční síťování. A dojde-li k pádu takové služby..? Přijdete pouze o její funkčnost a mikrojádro se ji mezitím pokusí restartovat.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Používá se API</p>
+</li>
+<li>
+<p>Větší režie může být výkonově náročná, ale vede k <strong>větší stabilitě</strong> daného systému</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Mezi dané OS patří např. Minix (výukový unixový OS) a Symbian.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://commons.wikimedia.org/wiki/File:Kernel-hybrid.svg"><img src="mikro.png" alt="mikro"></a>
+</div>
+<div class="title">Obrázek 3: Mikrokernel, licence: public domain</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_hybridní_jádro">Hybridní jádro</h3>
-
+<div class="paragraph">
+<p><strong>Kombinuje oba přístupy</strong> (mikrokernel s některými vlastnostmi monolitického jádra).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Optimální řešení z hlediska výkonu a stability</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Podstatná část dnešních OS, např. MS Windows NT, MS Windows 2000 a novější.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://cs.wikipedia.org/wiki/Mikroj%C3%A1dro#/media/File:Kernel-microkernel.svg"><img src="mikro.png" alt="mikro"></a>
+</div>
+<div class="title">Obrázek 4: Hybridní jádro, licence: public domain</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_klíčové_pojmy">Klíčové pojmy</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>operační systém, jádro, kernel, multitasking, abstrakce hardwarových prostředků, jednouživatelský a víceuživatelský systém, knihovna, proces, vlákno, application programming interface, monolitický kernel, mikrokernel, hybridní jádro</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_použité_zdroje">Použité zdroje</h2>
 <div class="sectionbody">
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://www.abclinuxu.cz/ucebnice/zaklady/zakladni-soucasti-systemu/slozeni-os" class="bare">http://www.abclinuxu.cz/ucebnice/zaklady/zakladni-soucasti-systemu/slozeni-os</a></p>
+</li>
+<li>
+<p><a href="http://www.gjszlin.cz/ivt/esf/ostatni-sin/operacni-systemy-1.php" class="bare">http://www.gjszlin.cz/ivt/esf/ostatni-sin/operacni-systemy-1.php</a></p>
+</li>
+<li>
+<p><a href="http://marlib.cmsps.cz/os/os.html" class="bare">http://marlib.cmsps.cz/os/os.html</a></p>
+</li>
+<li>
+<p><a href="http://www.nti.tul.cz/~kolar/os/os-s.pdf" class="bare">http://www.nti.tul.cz/~kolar/os/os-s.pdf</a></p>
+</li>
+<li>
+<p><a href="https://cs.wikipedia.org/wiki/J%C3%A1dro_opera%C4%8Dn%C3%ADho_syst%C3%A9mu" class="bare">https://cs.wikipedia.org/wiki/J%C3%A1dro_opera%C4%8Dn%C3%ADho_syst%C3%A9mu</a></p>
+</li>
+<li>
+<p><a href="http://foldoc.org/Application%20Program%20Interface" class="bare">http://foldoc.org/Application%20Program%20Interface</a></p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_kam_dál">Kam dál?</h2>
 <div class="sectionbody">
+<div class="ulist">
+<div class="title">Perfektní web jdoucí více do hloubky:</div>
+<ul>
+<li>
+<p><a href="http://www.abclinuxu.cz/ucebnice/zaklady" class="bare">http://www.abclinuxu.cz/ucebnice/zaklady</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Něco málo z historie (perfektně napsáno):</div>
+<ul>
+<li>
+<p><a href="http://switch2mac.blog.zive.cz/2011/11/jak-rozevrit-okna-dokoran/" class="bare">http://switch2mac.blog.zive.cz/2011/11/jak-rozevrit-okna-dokoran/</a></p>
+</li>
+</ul>
+</div>
 <hr>
 <div class="ulist">
 <ul>
@@ -677,7 +1007,7 @@ Jaká jsou další možná členění? Příklady konkrétních operačních sys
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-06 19:31:06 CEST
+Last updated 2016-09-06 21:23:08 CEST
 </div>
 </div>
 </body>
