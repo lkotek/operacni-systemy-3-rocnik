@@ -11,24 +11,42 @@
 == Co je to virtualizace?
 === Definice
 
-=== Důvody k nasazení
+=== Přínos a důvody k nasazení
 
-* Emulace více OS na jednom hardware
-* Snadný přenos virtualizovaného OS na jiný hostitelský hardware (počítač) 
+WARNING: Závisí vždy na konkrétním druhu virtualizace.
+
+* Testování od systému izolovaných aplikací
+* Možnost dosažení vyššího zabezpečení 
+* Lze emulovat různý hardware
 +
 NOTE: Možno i na hardware zcela jiné konfigurace
 +
 
-* Lze emulovat různý hardware
-* Možnost uložit stav virtualizovaného OS
-* Možnost uložit stav systému
+* Možnost uložit stav virtualizovaného systému
 +
-NOTE: Změny nejsou nevratné --> vhodné pro testování
+NOTE: Změny tedy nejsou nevratné -> opět vhodné pro testování
 +
 
-* Možnost dosažení vyššího zabezpečení 
+* Emulace více operačních systémů na jednom hardware
+* Možnost provozovat více virtualizovaných operačních systémů na jednom fyzickém serveru
+* Maximální využití hardware serveru
++
+NOTE: Umožňuje přiřazení systémových prostředků konkrétním virtuálním strojům
++
+
+* Server hosting (poskytnutí VPS --> **V**irtual **P**rivate **S**erver)
+* Snadný přenos virtualizovaného OS na jiný hostitelský hardware (počítač) 
+* Aplikace v Cloud computingu
 
 === Limitace a nároky
+
+.Limitace:
+Řízení sítě (routery, routování)Problém s virtualizací speciálních HW zařízení (čtečky, bezdrátové karty apod.)
+
+.Nároky:
+* Velké množství RAM (souběžný běh více OS)
+* Vysoký výkon a větší množství CPU
+
 
 == Rozdělení virtualizace
 === Kontejnerová virtualizace
@@ -55,9 +73,9 @@ NOTE: Google App Engine, Windows Azure Cloud services
 
 * Software as a service (SaaS)
 ** Práce s konkrétním poskytovaným software
-+
+
 NOTE: Salesforce, Google Apps, MS Office 365
-+
+
 
 == Klíčové pojmy
 
