@@ -34,19 +34,25 @@ NOTE: Změny tedy nejsou nevratné -> opět vhodné pro testování
 NOTE: Umožňuje přiřazení systémových prostředků konkrétním virtuálním strojům
 +
 
-* Server hosting (poskytnutí VPS --> **V**irtual **P**rivate **S**erver)
+* Server hosting (poskytnutí VPS -> **V**irtual **P**rivate **S**erver)
 * Snadný přenos virtualizovaného OS na jiný hostitelský hardware (počítač) 
 * Aplikace v Cloud computingu
 
 === Limitace a nároky
 
 .Limitace:
-Řízení sítě (routery, routování)Problém s virtualizací speciálních HW zařízení (čtečky, bezdrátové karty apod.)
+* Řízení sítě (routery, routování)
+* Problém s virtualizací speciálních zařízení (čtečky, bezdrátové karty apod.)
 
 .Nároky:
-* Velké množství RAM (souběžný běh více OS)
+* Velké množství operační paměni (souběžný provoz více operačních systémů)
 * Vysoký výkon a větší množství CPU
 
+=== Základní pojmy
+
+Hostitelský OS (hostovský, host):: OS, na kterém je spuštěn jeden nebo více virtualializovaných OS. Je odvislý od použitého hardware.
+
+Virtualizovaný OS (virtuální, guest):: OS, který je spuštěn v prostředí virtuálního stroje (software) na hostitelském OS. Hardware může být plně, nebo částečně, emulován
 
 == Rozdělení virtualizace
 === Kontejnerová virtualizace
@@ -62,7 +68,7 @@ NOTE: Umožňuje přiřazení systémových prostředků konkrétním virtuáln�
 * Infrastructure as a service (IaaS)
 ** Práce s virtuálními stroji a úložišti
 +
-NOTE: Amazon EC2, Google Compute Engine a další...
+NOTE: Amazon EC2, Google Compute Engine
 +
 
 * Platform as a service (PaaS)
@@ -75,7 +81,6 @@ NOTE: Google App Engine, Windows Azure Cloud services
 ** Práce s konkrétním poskytovaným software
 
 NOTE: Salesforce, Google Apps, MS Office 365
-
 
 == Klíčové pojmy
 
