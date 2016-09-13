@@ -6,9 +6,58 @@
 
 (C) Lukáš Kotek, link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
 
-NOTE: Tento dokument je *NEHOTOVÁ* prázdná šablona. Materiály budou v rámci roku průběžně doplňovány.
-
 <<<
+
+== Co je to virtualizace?
+=== Definice
+
+=== Důvody k nasazení
+
+* Emulace více OS na jednom hardware
+* Snadný přenos virtualizovaného OS na jiný hostitelský hardware (počítač) 
++
+NOTE: Možno i na hardware zcela jiné konfigurace
++
+
+* Lze emulovat různý hardware
+* Možnost uložit stav virtualizovaného OS
+* Možnost uložit stav systému
++
+NOTE: Změny nejsou nevratné --> vhodné pro testování
++
+
+* Možnost dosažení vyššího zabezpečení 
+
+=== Limitace a nároky
+
+== Rozdělení virtualizace
+=== Kontejnerová virtualizace
+
+=== Softwarová virtualizace
+
+=== Paravirtualizace (částečná virtualizace)
+
+=== Plná virtualizace (s podporou hardware)
+
+== Stručně o cloud computingu
+
+* Infrastructure as a service (IaaS)
+** Práce s virtuálními stroji a úložišti
++
+NOTE: Amazon EC2, Google Compute Engine a další...
++
+
+* Platform as a service (PaaS)
+** Práce s připravenými frameworky, webservery
++
+NOTE: Google App Engine, Windows Azure Cloud services
++
+
+* Software as a service (SaaS)
+** Práce s konkrétním poskytovaným software
++
+NOTE: Salesforce, Google Apps, MS Office 365
++
 
 == Klíčové pojmy
 
