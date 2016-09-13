@@ -14,8 +14,7 @@ NOTE: Tento dokument nemá ambici v žádném slova smyslu suplovat technickou d
 
 . Operační systémy -- účel, rozdělení a typy jader [link:01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.html[html]] [link:01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.pdf[pdf]] [link:01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.adoc[asciidoc]]
 
-.Virtualizační technologie, cloud computing  [link:02-virtualizace-cloudy/02-virtualizace-cloudy.html[html]] [link:02-virtualizace-cloudy/02-virtualizace-cloudy.pdf[pdf]] [link:02-virtualizace-cloudy/02-virtualizace-cloudy.adoc
-[asciidoc]]
+.Virtualizační technologie, cloud computing  [link:02-virtualizace-cloudy/02-virtualizace-cloudy.html[html]] [link:02-virtualizace-cloudy/02-virtualizace-cloudy.pdf[pdf]] [link:02-virtualizace-cloudy/02-virtualizace-cloudy.adoc [asciidoc]]
 
 . TO DO :-)
 
