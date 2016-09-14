@@ -155,7 +155,7 @@ WARNING: Jiná možná pojetí?
 
 == Klíčové pojmy
 
-vistualizace, virtuální stroj, virtualizovaný operační systém, guest, hostitelský operační systém, host, cloud, kontejnerová virtualizace, kontejner, emulace, paravirtualizace, plná virtualizace, pass, saas, iaas,
+vistualizace, virtuální stroj, virtualizovaný operační systém, guest, hostitelský operační systém, host, cloud, kontejnerová virtualizace, kontejner, emulace, paravirtualizace, plná virtualizace, pass, saas, iaas
 
 == Použité zdroje
 
