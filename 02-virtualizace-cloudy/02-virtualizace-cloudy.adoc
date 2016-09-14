@@ -11,9 +11,20 @@
 == Co je to virtualizace?
 === Definice
 
-=== Přínos a důvody k nasazení
+[quote, 'http://www.fi.muni.cz/~kas/pv090/referaty/2014-podzim/virt.html[Zdroj: muni.cz]']
+____
+Virtualizace je technologie umožnující provozovat více nezávislých virtuálních strojů na jednom fyzickém stroji. Potřeba virtuálních strojů vznikla jako odpověď na problematiku vývoje a debuggingu OS, která je v případě fyzického stroje obtížně řešitelná.
+____
 
-WARNING: Závisí vždy na konkrétním druhu virtualizace.
+[quote, 'http://www.intertech.cz/virtualizace/[Zdroj: intertech.cz]']
+____
+Pokud bychom chtěli definovat virtualizaci jako takovou, můžeme říct, že se jedná o oddělení zdrojů (CPU, operační paměť) od fyzických komponent. Tato abstrakce je základní myšlenkou virtualizace a konsolidace architektury ať už serverové nebo desktopové.
+____
+
+
+=== Důvody pro nasazení virtualizace a její přínos
+
+IMPORTANT: Závisí vždy na konkrétním druhu virtualizace. Ne každý umožňuje vše dále zmíněné.
 
 * Testování od systému izolovaných aplikací
 * Možnost dosažení vyššího zabezpečení 
@@ -46,7 +57,7 @@ NOTE: Umožňuje přiřazení systémových prostředků konkrétním virtuáln�
 
 .Nároky:
 * Velké množství operační paměni (souběžný provoz více operačních systémů)
-* Vysoký výkon a větší množství CPU
+* Často (u některých typů virtualizace) velké nároky množství a výkon procesorů
 
 === Základní pojmy
 
@@ -54,37 +65,97 @@ Hostitelský OS (hostovský, host):: OS, na kterém je spuštěn jeden nebo víc
 
 Virtualizovaný OS (virtuální, guest):: OS, který je spuštěn v prostředí virtuálního stroje (software) na hostitelském OS. Hardware může být plně, nebo částečně, emulován
 
+Virtuální stroj (virtual machine):: "Schránka" vytvořená virtualizačním nástrojem, které přiřazujeme konkrétní parametry (velikost operační paměti, počet procesorových jader, režim práce síťové karty), která se vůči virtualizovanému OS tváří jako skutečný hardware.
+
+Virtuální pevný disk:: Soubor obsahující data konkrétního diskového oddílu zpřístupněná virtuálním strojem (např. s příponou VDI u VirtualBoxu) virtualizovanému operačnímu systému.
+
 == Rozdělení virtualizace
 === Kontejnerová virtualizace
 
-=== Softwarová virtualizace
+* Více oddělených prostředí (tzv. kontejnerů) v rámci jednoho operačního systému
+
+TIP: Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředímy, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci. 
+
+* Výkonově efektivní řešení
+** Kontejner je umístěn přímo v hostitelském systému, hardware není nijak emulován.
+*
+* Vysoké zabezpečení
+** Aplikace uvnitř kontejneru nemůže zasáhnout mimo něj, pokud to přímo neumožníme.
+
+TIP: Obdobný princip se nazývá "sandbox". Jedná se o čím dál častější formu nasazování aplikací.
+
+* Jednoduchost nasazení
+** vše nezbytně potřebné pro svůj chod má aplikace v samotném kontejneru. Ten pak můžeme lehce distribuovat dále na cílový (hostitelský) operační systém, kde aplikace poběží.
+ 
+* Závislost na operačním systému a jeho jádru
+** Kontejner určený pro GNU/Linux poběží opět pouze na GNU/Linuxu.
+
+NOTE: Mezi typické příklady patří například BSD Jail, chroot (využívá změny kořenového adresáře na unixových systémech), nebo Solaris Zones. Velice progresivním nástrojem pro práci s kontejnery dnes je *Docker*.
+
+=== Softwarová virtualizace (emulace)
+
+* *Hardware může být plně emulován*
+* *Vysoké nároky na hardware*, na kterém je provozován hostitelský operační systém
+
+TIP: Jedná se až o násobně vyšší nároky na hardware (oproti nativnímu stavu). Může být např. softwarově emulována každá jednotlivá instrukce z instrukční sady emulovaného mikroprocesoru.
+
+* Možnost *emulovat různé procesorové architektury* 
+
+TIP: ARMový CPU tak může být emulován v prostředí systému MS Windows zkompilovaného pro x86 instrukční sadu. 
+
+NOTE: Příklady:  Android mobile device emulator (v rámci ADT), DOSBox, QUEMU, Xbox emulator
 
 === Paravirtualizace (částečná virtualizace)
 
+* Nepřímý (zprostředkovaný) přístup k hardware
+* Nelze používat hardwarovou akceleraci
+* Závislost na konkrétní procesorové architektuře
+
+NOTE: Virtualizovaný GNU/Linux zkompilovaný pro x86 poběží na MS Windows zkompilovaných pro x86. Pokud by GNU/Linux byl zkompilovaný pro ARM, není možné využít paravirtualizace.
+
+* Nižší hardwarová náročnost než u emulace
+
+NOTE: Příklady: VirtualBox, Virtual PC, VMWare
+
 === Plná virtualizace (s podporou hardware)
+
+* Nutná podpora na straně procesoru
+** AMD -- technologie AMD-V
+** Intel -- VT-x
+
+* Nutné speciální jádro (resp. jeho doplněk, jaderný modul)
+* Přímý přístup k HW prostředkům
+* Vysoký výkon srovnatelný s během v nativním prostředí
+
+NOTE: Příklady: KVM, Xen, Virtualbox, VMWare
+
+WARNING: Další možné druhy virtualizace? Kam zařadit např. technologii OpenVZ?
 
 == Stručně o cloud computingu
 
-* Infrastructure as a service (IaaS)
+* *Infrastructure as a service* (**I**aa**S**)
 ** Práce s virtuálními stroji a úložišti
 +
 NOTE: Amazon EC2, Google Compute Engine
 +
 
-* Platform as a service (PaaS)
+* *Platform as a service* (**P**aa**S**)
 ** Práce s připravenými frameworky, webservery
 +
 NOTE: Google App Engine, Windows Azure Cloud services
 +
 
-* Software as a service (SaaS)
+* *Software as a service* (**S**aa**S**)
 ** Práce s konkrétním poskytovaným software
-
++
 NOTE: Salesforce, Google Apps, MS Office 365
++
+
+WARNING: Jiná možná pojetí?
 
 == Klíčové pojmy
 
-TODO
+vistualizace, virtuální stroj, virtualizovaný operační systém, guest, hostitelský operační systém, host, cloud, kontejnerová virtualizace, kontejner, emulace, paravirtualizace, plná virtualizace, pass, saas, iaas,
 
 == Použité zdroje
 
@@ -96,5 +167,5 @@ TODO
 
 ---
 
-- Přehled kapitol: [link:../README.html[html]] [link:../README.md[asciidoc]]
+- Přehled kapitol: [link:../README.html[html]] [link:../README.pdf[pdf]] [link:../README.md[asciidoc]]
 
