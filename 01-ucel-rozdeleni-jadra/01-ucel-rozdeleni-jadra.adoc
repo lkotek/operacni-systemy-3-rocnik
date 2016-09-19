@@ -137,7 +137,7 @@ image::mikro.png[caption="Obrázek 3: ", title="Mikrokernel, licence: public dom
 
 NOTE: Podstatná část dnešních OS, např. MS Windows NT, MS Windows 2000 a novější.
 
-image::mikro.png[caption="Obrázek 4: ", title="Hybridní jádro, licence: public domain", link="https://cs.wikipedia.org/wiki/Mikroj%C3%A1dro#/media/File:Kernel-microkernel.svg"]
+image::hybrid.png[caption="Obrázek 4: ", title="Hybridní jádro, licence: public domain", link="https://cs.wikipedia.org/wiki/Mikroj%C3%A1dro#/media/File:Kernel-microkernel.svg"]
 
 == Klíčové pojmy
 
