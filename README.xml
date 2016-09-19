@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Operační systémy (OSY)</title>
-<date>2016-09-06</date>
+<date>2016-09-19</date>
 </info>
 <preface>
 <title></title>
@@ -19,6 +19,9 @@
 <orderedlist numeration="arabic">
 <listitem>
 <simpara>Operační systémy&#8201;&#8212;&#8201;účel, rozdělení a typy jader [<link xl:href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.html">html</link>] [<link xl:href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.pdf">pdf</link>] [<link xl:href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.adoc">asciidoc</link>]</simpara>
+</listitem>
+<listitem>
+<simpara>Virtualizační technologie, cloud computing  [<link xl:href="02-virtualizace-cloudy/02-virtualizace-cloudy.html">html</link>] [<link xl:href="02-virtualizace-cloudy/02-virtualizace-cloudy.pdf">pdf</link>] [<link xl:href="02-virtualizace-cloudy/02-virtualizace-cloudy.adoc">asciidoc</link>]</simpara>
 </listitem>
 <listitem>
 <simpara>TO DO :-)</simpara>

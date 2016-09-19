@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Virtualizační technologie, cloud computing</title>
+<date>2016-09-19</date>
+</info>
+<preface>
+<title></title>
+<simpara>&#169; Lukáš Kotek, <link xl:href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</link></simpara>
+<simpara><?asciidoc-pagebreak?></simpara>
+</preface>
+<chapter xml:id="_co_je_to_virtualizace">
+<title>Co je to virtualizace?</title>
+<section xml:id="_definice">
+<title>Definice</title>
+<blockquote>
+<attribution>
+<link xl:href="http://www.fi.muni.cz/~kas/pv090/referaty/2014-podzim/virt.html">Zdroj: muni.cz</link>
+</attribution>
+<simpara>Virtualizace je technologie umožnující provozovat více nezávislých virtuálních strojů na jednom fyzickém stroji. Potřeba virtuálních strojů vznikla jako odpověď na problematiku vývoje a debuggingu OS, která je v případě fyzického stroje obtížně řešitelná.</simpara>
+</blockquote>
+<blockquote>
+<attribution>
+<link xl:href="http://www.intertech.cz/virtualizace/">Zdroj: intertech.cz</link>
+</attribution>
+<simpara>Pokud bychom chtěli definovat virtualizaci jako takovou, můžeme říct, že se jedná o oddělení zdrojů (CPU, operační paměť) od fyzických komponent. Tato abstrakce je základní myšlenkou virtualizace a konsolidace architektury ať už serverové nebo desktopové.</simpara>
+</blockquote>
+</section>
+<section xml:id="_důvody_pro_nasazení_virtualizace_a_její_přínos">
+<title>Důvody pro nasazení virtualizace a její přínos</title>
+<important>
+<simpara>Závisí vždy na konkrétním druhu virtualizace. Ne každý umožňuje vše dále zmíněné.</simpara>
+</important>
+<itemizedlist>
+<listitem>
+<simpara>Testování od systému izolovaných aplikací</simpara>
+</listitem>
+<listitem>
+<simpara>Možnost dosažení vyššího zabezpečení</simpara>
+</listitem>
+<listitem>
+<simpara>Lze emulovat různý hardware</simpara>
+<note>
+<simpara>Možno i na hardware zcela jiné konfigurace</simpara>
+</note>
+</listitem>
+<listitem>
+<simpara>Možnost uložit stav virtualizovaného systému</simpara>
+<note>
+<simpara>Změny tedy nejsou nevratné &#8594; opět vhodné pro testování</simpara>
+</note>
+</listitem>
+<listitem>
+<simpara>Emulace více operačních systémů na jednom hardware</simpara>
+</listitem>
+<listitem>
+<simpara>Možnost provozovat více virtualizovaných operačních systémů na jednom fyzickém serveru</simpara>
+</listitem>
+<listitem>
+<simpara>Maximální využití hardware serveru</simpara>
+<note>
+<simpara>Umožňuje přiřazení systémových prostředků konkrétním virtuálním strojům</simpara>
+</note>
+</listitem>
+<listitem>
+<simpara>Server hosting (poskytnutí VPS &#8594; <emphasis role="strong">V</emphasis>irtual <emphasis role="strong">P</emphasis>rivate <emphasis role="strong">S</emphasis>erver)</simpara>
+</listitem>
+<listitem>
+<simpara>Snadný přenos virtualizovaného OS na jiný hostitelský hardware (počítač)</simpara>
+</listitem>
+<listitem>
+<simpara>Aplikace v Cloud computingu</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_limitace_a_nároky">
+<title>Limitace a nároky</title>
+<itemizedlist>
+<title>Limitace:</title>
+<listitem>
+<simpara>Řízení sítě (routery, routování)</simpara>
+</listitem>
+<listitem>
+<simpara>Problém s virtualizací speciálních zařízení (čtečky, bezdrátové karty apod.)</simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<title>Nároky:</title>
+<listitem>
+<simpara>Velké množství operační paměni (souběžný provoz více operačních systémů)</simpara>
+</listitem>
+<listitem>
+<simpara>Často (u některých typů virtualizace) velké nároky množství a výkon procesorů</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_základní_pojmy">
+<title>Základní pojmy</title>
+<variablelist>
+<varlistentry>
+<term>Hostitelský OS (hostovský, host)</term>
+<listitem>
+<simpara>OS, na kterém je spuštěn jeden nebo více virtualializovaných OS. Je odvislý od použitého hardware.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Virtualizovaný OS (virtuální, guest)</term>
+<listitem>
+<simpara>OS, který je spuštěn v prostředí virtuálního stroje (software) na hostitelském OS. Hardware může být plně, nebo částečně, emulován</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Virtuální stroj (virtual machine)</term>
+<listitem>
+<simpara>"Schránka" vytvořená virtualizačním nástrojem, které přiřazujeme konkrétní parametry (velikost operační paměti, počet procesorových jader, režim práce síťové karty), která se vůči virtualizovanému OS tváří jako skutečný hardware.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Virtuální pevný disk</term>
+<listitem>
+<simpara>Soubor obsahující data konkrétního diskového oddílu zpřístupněná virtuálním strojem (např. s příponou VDI u VirtualBoxu) virtualizovanému operačnímu systému.</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+</section>
+</chapter>
+<chapter xml:id="_rozdělení_virtualizace">
+<title>Rozdělení virtualizace</title>
+<section xml:id="_kontejnerová_virtualizace">
+<title>Kontejnerová virtualizace</title>
+<itemizedlist>
+<listitem>
+<simpara>Více oddělených prostředí (tzv. kontejnerů) v rámci jednoho operačního systému</simpara>
+</listitem>
+</itemizedlist>
+<tip>
+<simpara>Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředímy, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci.</simpara>
+</tip>
+<itemizedlist>
+<listitem>
+<simpara>Výkonově efektivní řešení</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Kontejner je umístěn přímo v hostitelském systému, hardware není nijak emulován.
+*</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Vysoké zabezpečení</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Aplikace uvnitř kontejneru nemůže zasáhnout mimo něj, pokud to přímo neumožníme.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<tip>
+<simpara>Obdobný princip se nazývá "sandbox". Jedná se o čím dál častější formu nasazování aplikací.</simpara>
+</tip>
+<itemizedlist>
+<listitem>
+<simpara>Jednoduchost nasazení</simpara>
+<itemizedlist>
+<listitem>
+<simpara>vše nezbytně potřebné pro svůj chod má aplikace v samotném kontejneru. Ten pak můžeme lehce distribuovat dále na cílový (hostitelský) operační systém, kde aplikace poběží.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Závislost na operačním systému a jeho jádru</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Kontejner určený pro GNU/Linux poběží opět pouze na GNU/Linuxu.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<note>
+<simpara>Mezi typické příklady patří například BSD Jail, chroot (využívá změny kořenového adresáře na unixových systémech), nebo Solaris Zones. Velice progresivním nástrojem pro práci s kontejnery dnes je <emphasis role="strong">Docker</emphasis>.</simpara>
+</note>
+</section>
+<section xml:id="_softwarová_virtualizace_emulace">
+<title>Softwarová virtualizace (emulace)</title>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">Hardware může být plně emulován</emphasis></simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Vysoké nároky na hardware</emphasis>, na kterém je provozován hostitelský operační systém</simpara>
+</listitem>
+</itemizedlist>
+<tip>
+<simpara>Jedná se až o násobně vyšší nároky na hardware (oproti nativnímu stavu). Může být např. softwarově emulována každá jednotlivá instrukce z instrukční sady emulovaného mikroprocesoru.</simpara>
+</tip>
+<itemizedlist>
+<listitem>
+<simpara>Možnost <emphasis role="strong">emulovat různé procesorové architektury</emphasis></simpara>
+</listitem>
+</itemizedlist>
+<tip>
+<simpara>ARMový CPU tak může být emulován v prostředí systému MS Windows zkompilovaného pro x86 instrukční sadu.</simpara>
+</tip>
+<note>
+<simpara>Příklady:  Android mobile device emulator (v rámci ADT), DOSBox, QUEMU, Xbox emulator</simpara>
+</note>
+</section>
+<section xml:id="_paravirtualizace_částečná_virtualizace">
+<title>Paravirtualizace (částečná virtualizace)</title>
+<itemizedlist>
+<listitem>
+<simpara>Nepřímý (zprostředkovaný) přístup k hardware</simpara>
+</listitem>
+<listitem>
+<simpara>Nelze používat hardwarovou akceleraci</simpara>
+</listitem>
+<listitem>
+<simpara>Závislost na konkrétní procesorové architektuře</simpara>
+</listitem>
+</itemizedlist>
+<note>
+<simpara>Virtualizovaný GNU/Linux zkompilovaný pro x86 poběží na MS Windows zkompilovaných pro x86. Pokud by GNU/Linux byl zkompilovaný pro ARM, není možné využít paravirtualizace.</simpara>
+</note>
+<itemizedlist>
+<listitem>
+<simpara>Nižší hardwarová náročnost než u emulace</simpara>
+</listitem>
+</itemizedlist>
+<note>
+<simpara>Příklady: VirtualBox, Virtual PC, VMWare</simpara>
+</note>
+</section>
+<section xml:id="_plná_virtualizace_s_podporou_hardware">
+<title>Plná virtualizace (s podporou hardware)</title>
+<itemizedlist>
+<listitem>
+<simpara>Nutná podpora na straně procesoru</simpara>
+<itemizedlist>
+<listitem>
+<simpara>AMD&#8201;&#8212;&#8201;technologie AMD-V</simpara>
+</listitem>
+<listitem>
+<simpara>Intel&#8201;&#8212;&#8201;VT-x</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Nutné speciální jádro (resp. jeho doplněk, jaderný modul)</simpara>
+</listitem>
+<listitem>
+<simpara>Přímý přístup k HW prostředkům</simpara>
+</listitem>
+<listitem>
+<simpara>Vysoký výkon srovnatelný s během v nativním prostředí</simpara>
+</listitem>
+</itemizedlist>
+<note>
+<simpara>Příklady: KVM, Xen, Virtualbox, VMWare</simpara>
+</note>
+<warning>
+<simpara>Další možné druhy virtualizace? Kam zařadit např. technologii OpenVZ?</simpara>
+</warning>
+</section>
+</chapter>
+<chapter xml:id="_stručně_o_cloud_computingu">
+<title>Stručně o cloud computingu</title>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">Infrastructure as a service</emphasis> (<emphasis role="strong">I</emphasis>aa<emphasis role="strong">S</emphasis>)</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Práce s virtuálními stroji a úložišti</simpara>
+<note>
+<simpara>Amazon EC2, Google Compute Engine</simpara>
+</note>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Platform as a service</emphasis> (<emphasis role="strong">P</emphasis>aa<emphasis role="strong">S</emphasis>)</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Práce s připravenými frameworky, webservery</simpara>
+<note>
+<simpara>Google App Engine, Windows Azure Cloud services</simpara>
+</note>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Software as a service</emphasis> (<emphasis role="strong">S</emphasis>aa<emphasis role="strong">S</emphasis>)</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Práce s konkrétním poskytovaným software</simpara>
+<note>
+<simpara>Salesforce, Google Apps, MS Office 365</simpara>
+</note>
+<warning>
+<simpara>Jiná možná pojetí?</simpara>
+</warning>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</chapter>
+<chapter xml:id="_klíčové_pojmy">
+<title>Klíčové pojmy</title>
+<simpara>vistualizace, virtuální stroj, virtualizovaný operační systém, guest, hostitelský operační systém, host, cloud, kontejnerová virtualizace, kontejner, emulace, paravirtualizace, plná virtualizace, pass, saas, iaas</simpara>
+</chapter>
+<chapter xml:id="_použité_zdroje">
+<title>Použité zdroje</title>
+<simpara>TODO</simpara>
+</chapter>
+<chapter xml:id="_kam_dál">
+<title>Kam dál?</title>
+<simpara>TODO</simpara>
+<simpara><?asciidoc-hr?></simpara>
+<itemizedlist>
+<listitem>
+<simpara>Přehled kapitol: [<link xl:href="../README.html">html</link>] [<link xl:href="../README.pdf">pdf</link>] [<link xl:href="../README.md">asciidoc</link>]</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+</book>
