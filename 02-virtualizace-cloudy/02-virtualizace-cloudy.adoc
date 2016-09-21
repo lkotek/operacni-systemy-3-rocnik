@@ -38,7 +38,7 @@ NOTE: Možno i na hardware zcela jiné konfigurace
 NOTE: Změny tedy nejsou nevratné -> opět vhodné pro testování
 +
 
-* Emulace více operačních systémů na jednom hardware
+* Provoz více operačních systémů na jednom hardware
 * Možnost provozovat více virtualizovaných operačních systémů na jednom fyzickém serveru
 * Maximální využití hardware serveru
 +
@@ -74,7 +74,7 @@ Virtuální pevný disk:: Soubor obsahující data konkrétního diskového odd�
 
 * Více oddělených prostředí (tzv. kontejnerů) v rámci jednoho operačního systému
 
-TIP: Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředímy, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci. 
+TIP: Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředími, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci. 
 
 * Výkonově efektivní řešení
 ** Kontejner je umístěn přímo v hostitelském systému, hardware není nijak emulován.
@@ -87,10 +87,12 @@ TIP: Obdobný princip se nazývá "sandbox". Jedná se o čím dál častější
 * Jednoduchost nasazení
 ** vše nezbytně potřebné pro svůj chod má aplikace v samotném kontejneru. Ten pak můžeme lehce distribuovat dále na cílový (hostitelský) operační systém, kde aplikace poběží.
  
-* Závislost na operačním systému a jeho jádru
+* Závislost na operačním systému a jeho jádru (v klasickém pojetí)
 ** Kontejner určený pro GNU/Linux poběží opět pouze na GNU/Linuxu.
 
 NOTE: Mezi typické příklady patří například BSD Jail, chroot (využívá změny kořenového adresáře na unixových systémech), nebo Solaris Zones. Velice progresivním nástrojem pro práci s kontejnery dnes je *Docker*.
+
+image::docker.png[caption="Obrázek 1: ", title="Logo Dockeru, autor: dotCloud, Inc., licence: Apache License, Version 2.0", link="http://www.docker.io/static/img/docker-top-logo.png]
 
 === Softwarová virtualizace (emulace)
 
@@ -129,6 +131,8 @@ NOTE: Příklady: VirtualBox, Virtual PC, VMWare
 
 NOTE: Příklady: KVM, Xen, Virtualbox, VMWare
 
+image::hw-virtualizace.png[caption="Obrázek 2: ", title="Plná (hardwarová) virtualizace, autor: John Aplessed, licence: public domain", link="https://commons.m.wikimedia.org/wiki/File:Hardware_Virtualization_(copy).svg]
+
 WARNING: Další možné druhy virtualizace? Kam zařadit např. technologii OpenVZ?
 
 == Stručně o cloud computingu
@@ -159,11 +163,21 @@ vistualizace, virtuální stroj, virtualizovaný operační systém, guest, host
 
 == Použité zdroje
 
-TODO
+. http://cs.wikipedia.org/wiki/Chroot
+. http://www.fi.muni.cz/~kas/pv090/referaty/2014-podzim/virt.html
+. http://www.intertech.cz/virtualizace/
+. http://cs.wikibooks.org/wiki/Virtualizace_v_Linuxu#Kontejnerov.C3.A1_virtualizace
 
 == Kam dál?
 
-TODO
+.Populární nástroj pro práci s kontenerovou virtualizací:
+* https://www.docker.com/
+
+.A seriál o tom, jak ho zprovoznit na jedné linuxové distribuci:
+* https://mojefedora.cz/zaciname-s-dockerem-na-fedore/
+
+.A pro změnu video o tom, že kontejnery nejsou pouze o Dockeru :-)
+* https://m.youtube.com/watch?list=PLub6xBWO8gV_Mr-UuxrHcfUbuGv5n_N5g&v=rTIjheXbwE8
 
 ---
 

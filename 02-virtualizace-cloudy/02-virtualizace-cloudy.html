@@ -601,7 +601,7 @@ Změny tedy nejsou nevratné &#8594; opět vhodné pro testování
 </div>
 </li>
 <li>
-<p>Emulace více operačních systémů na jednom hardware</p>
+<p>Provoz více operačních systémů na jednom hardware</p>
 </li>
 <li>
 <p>Možnost provozovat více virtualizovaných operačních systémů na jednom fyzickém serveru</p>
@@ -702,7 +702,7 @@ Umožňuje přiřazení systémových prostředků konkrétním virtuálním str
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředímy, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci.
+Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředími, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci.
 </td>
 </tr>
 </table>
@@ -757,7 +757,7 @@ Obdobný princip se nazývá "sandbox". Jedná se o čím dál častější form
 </div>
 </li>
 <li>
-<p>Závislost na operačním systému a jeho jádru</p>
+<p>Závislost na operačním systému a jeho jádru (v klasickém pojetí)</p>
 <div class="ulist">
 <ul>
 <li>
@@ -779,6 +779,12 @@ Mezi typické příklady patří například BSD Jail, chroot (využívá změny
 </td>
 </tr>
 </table>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href=""http://www.docker.io/static/img/docker-top-logo.png"><img src="docker.png" alt="docker"></a>
+</div>
+<div class="title">Obrázek 1: Logo Dockeru, autor: dotCloud, Inc., licence: Apache License, Version 2.0</div>
 </div>
 </div>
 <div class="sect2">
@@ -924,6 +930,12 @@ Příklady: KVM, Xen, Virtualbox, VMWare
 </tr>
 </table>
 </div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href=""https://commons.m.wikimedia.org/wiki/File:Hardware_Virtualization_(copy).svg"><img src="hw-virtualizace.png" alt="hw virtualizace"></a>
+</div>
+<div class="title">Obrázek 2: Plná (hardwarová) virtualizace, autor: John Aplessed, licence: public domain</div>
+</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -1037,16 +1049,50 @@ Jiná možná pojetí?
 <div class="sect1">
 <h2 id="_použité_zdroje">Použité zdroje</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>TODO</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://cs.wikipedia.org/wiki/Chroot" class="bare">http://cs.wikipedia.org/wiki/Chroot</a></p>
+</li>
+<li>
+<p><a href="http://www.fi.muni.cz/~kas/pv090/referaty/2014-podzim/virt.html" class="bare">http://www.fi.muni.cz/~kas/pv090/referaty/2014-podzim/virt.html</a></p>
+</li>
+<li>
+<p><a href="http://www.intertech.cz/virtualizace/" class="bare">http://www.intertech.cz/virtualizace/</a></p>
+</li>
+<li>
+<p><a href="http://cs.wikibooks.org/wiki/Virtualizace_v_Linuxu#Kontejnerov.C3.A1_virtualizace" class="bare">http://cs.wikibooks.org/wiki/Virtualizace_v_Linuxu#Kontejnerov.C3.A1_virtualizace</a></p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_kam_dál">Kam dál?</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>TODO</p>
+<div class="ulist">
+<div class="title">Populární nástroj pro práci s kontenerovou virtualizací:</div>
+<ul>
+<li>
+<p><a href="https://www.docker.com/" class="bare">https://www.docker.com/</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">A seriál o tom, jak ho zprovoznit na jedné linuxové distribuci:</div>
+<ul>
+<li>
+<p><a href="https://mojefedora.cz/zaciname-s-dockerem-na-fedore/" class="bare">https://mojefedora.cz/zaciname-s-dockerem-na-fedore/</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">A pro změnu video o tom, že kontejnery nejsou pouze o Dockeru :-)</div>
+<ul>
+<li>
+<p><a href="https://m.youtube.com/watch?list=PLub6xBWO8gV_Mr-UuxrHcfUbuGv5n_N5g&amp;v=rTIjheXbwE8" class="bare">https://m.youtube.com/watch?list=PLub6xBWO8gV_Mr-UuxrHcfUbuGv5n_N5g&amp;v=rTIjheXbwE8</a></p>
+</li>
+</ul>
 </div>
 <hr>
 <div class="ulist">
@@ -1061,7 +1107,7 @@ Jiná možná pojetí?
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-19 19:32:12 EEST
+Last updated 2016-09-21 17:15:12 EEST
 </div>
 </div>
 </body>

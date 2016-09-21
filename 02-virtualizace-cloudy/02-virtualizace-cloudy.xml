@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Virtualizační technologie, cloud computing</title>
-<date>2016-09-19</date>
+<date>2016-09-21</date>
 </info>
 <preface>
 <title></title>
@@ -53,7 +53,7 @@
 </note>
 </listitem>
 <listitem>
-<simpara>Emulace více operačních systémů na jednom hardware</simpara>
+<simpara>Provoz více operačních systémů na jednom hardware</simpara>
 </listitem>
 <listitem>
 <simpara>Možnost provozovat více virtualizovaných operačních systémů na jednom fyzickém serveru</simpara>
@@ -136,7 +136,7 @@
 </listitem>
 </itemizedlist>
 <tip>
-<simpara>Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředímy, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci.</simpara>
+<simpara>Do kontejneru je možné umístit samotnou aplikaci, aplikaci s knihovnami a běhovými prostředími, nebo i s podstatnou částí operačního systému, který potřebuje ke své funkci.</simpara>
 </tip>
 <itemizedlist>
 <listitem>
@@ -170,7 +170,7 @@
 </itemizedlist>
 </listitem>
 <listitem>
-<simpara>Závislost na operačním systému a jeho jádru</simpara>
+<simpara>Závislost na operačním systému a jeho jádru (v klasickém pojetí)</simpara>
 <itemizedlist>
 <listitem>
 <simpara>Kontejner určený pro GNU/Linux poběží opět pouze na GNU/Linuxu.</simpara>
@@ -181,6 +181,15 @@
 <note>
 <simpara>Mezi typické příklady patří například BSD Jail, chroot (využívá změny kořenového adresáře na unixových systémech), nebo Solaris Zones. Velice progresivním nástrojem pro práci s kontejnery dnes je <emphasis role="strong">Docker</emphasis>.</simpara>
 </note>
+<figure>
+<title>Logo Dockeru, autor: dotCloud, Inc., licence: Apache License, Version 2.0</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="docker.png"/>
+</imageobject>
+<textobject><phrase>docker</phrase></textobject>
+</mediaobject>
+</figure>
 </section>
 <section xml:id="_softwarová_virtualizace_emulace">
 <title>Softwarová virtualizace (emulace)</title>
@@ -259,6 +268,15 @@
 <note>
 <simpara>Příklady: KVM, Xen, Virtualbox, VMWare</simpara>
 </note>
+<figure>
+<title>Plná (hardwarová) virtualizace, autor: John Aplessed, licence: public domain</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="hw-virtualizace.png"/>
+</imageobject>
+<textobject><phrase>hw virtualizace</phrase></textobject>
+</mediaobject>
+</figure>
 <warning>
 <simpara>Další možné druhy virtualizace? Kam zařadit např. technologii OpenVZ?</simpara>
 </warning>
@@ -311,11 +329,41 @@
 </chapter>
 <chapter xml:id="_použité_zdroje">
 <title>Použité zdroje</title>
-<simpara>TODO</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara><link xl:href="http://cs.wikipedia.org/wiki/Chroot">http://cs.wikipedia.org/wiki/Chroot</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.fi.muni.cz/~kas/pv090/referaty/2014-podzim/virt.html">http://www.fi.muni.cz/~kas/pv090/referaty/2014-podzim/virt.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.intertech.cz/virtualizace/">http://www.intertech.cz/virtualizace/</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://cs.wikibooks.org/wiki/Virtualizace_v_Linuxu#Kontejnerov.C3.A1_virtualizace">http://cs.wikibooks.org/wiki/Virtualizace_v_Linuxu#Kontejnerov.C3.A1_virtualizace</link></simpara>
+</listitem>
+</orderedlist>
 </chapter>
 <chapter xml:id="_kam_dál">
 <title>Kam dál?</title>
-<simpara>TODO</simpara>
+<itemizedlist>
+<title>Populární nástroj pro práci s kontenerovou virtualizací:</title>
+<listitem>
+<simpara><link xl:href="https://www.docker.com/">https://www.docker.com/</link></simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<title>A seriál o tom, jak ho zprovoznit na jedné linuxové distribuci:</title>
+<listitem>
+<simpara><link xl:href="https://mojefedora.cz/zaciname-s-dockerem-na-fedore/">https://mojefedora.cz/zaciname-s-dockerem-na-fedore/</link></simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<title>A pro změnu video o tom, že kontejnery nejsou pouze o Dockeru :-)</title>
+<listitem>
+<simpara><link xl:href="https://m.youtube.com/watch?list=PLub6xBWO8gV_Mr-UuxrHcfUbuGv5n_N5g&amp;v=rTIjheXbwE8">https://m.youtube.com/watch?list=PLub6xBWO8gV_Mr-UuxrHcfUbuGv5n_N5g&amp;v=rTIjheXbwE8</link></simpara>
+</listitem>
+</itemizedlist>
 <simpara><?asciidoc-hr?></simpara>
 <itemizedlist>
 <listitem>

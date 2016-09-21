@@ -73,7 +73,7 @@ Nebo také "kernel". Jedná se o základní část operačního systému, řeš�
 
 NOTE: Jádra se týká i už zmíněný plánovač. Stejně tak jádro (v závislosti typu) řeší ovladače hardwaru.
 
-image::kernel-schema.png[caption="Obrázek 1: ", title="Schéma operačního systému, autor: Pavouk, licence: CC-BY-SA", link="https://cs.wikipedia.org/wiki/Soubor:Kernel_Layout_cs.svg]
+image::docker\.png[caption="Obrázek 1: ", title="Docker, autor: Pavouk, licence: CC-BY-SA", link="https://cs.wikipedia.org/wiki/Soubor:Kernel_Layout_cs.svg]
 
 WARNING: V čem tkví problematika kernel a userspace?
 
