@@ -73,7 +73,7 @@ Nebo také "kernel". Jedná se o základní část operačního systému, řeš�
 
 NOTE: Jádra se týká i už zmíněný plánovač. Stejně tak jádro (v závislosti typu) řeší ovladače hardwaru.
 
-image::docker\.png[caption="Obrázek 1: ", title="Docker, autor: Pavouk, licence: CC-BY-SA", link="https://cs.wikipedia.org/wiki/Soubor:Kernel_Layout_cs.svg]
+image::docker\.png[caption="Obrázek 1: ", title="Docker, autor: Pavouk, licence: CC-BY-SA", link="https://cs.wikipedia.org/wiki/Soubor:Kernel_Layout_cs.svg"]
 
 WARNING: V čem tkví problematika kernel a userspace?
 
@@ -127,7 +127,7 @@ TIP: Co je to server? Např. služba zodpovědná za funkční síťování. A d
 
 NOTE: Mezi dané OS patří např. Minix (výukový unixový OS) a Symbian.
 
-image::mikro.png[caption="Obrázek 3: ", title="Mikrokernel, licence: public domain", link="https://commons.wikimedia.org/wiki/File:Kernel-hybrid.svg"]
+image::mikro.png[caption="Obrázek 3: ", title="Mikrokernel, licence: public domain", link="https://cs.wikipedia.org/wiki/Mikroj%C3%A1dro#/media/File:Kernel-microkernel.svg"]
 
 === Hybridní jádro
 
@@ -137,7 +137,7 @@ image::mikro.png[caption="Obrázek 3: ", title="Mikrokernel, licence: public dom
 
 NOTE: Podstatná část dnešních OS, např. MS Windows NT, MS Windows 2000 a novější.
 
-image::hybrid.png[caption="Obrázek 4: ", title="Hybridní jádro, licence: public domain", link="https://cs.wikipedia.org/wiki/Mikroj%C3%A1dro#/media/File:Kernel-microkernel.svg"]
+image::hybrid.png[caption="Obrázek 4: ", title="Hybridní jádro, licence: public domain", link="https://commons.wikimedia.org/wiki/File:Kernel-hybrid.svg"]
 
 == Klíčové pojmy
 
