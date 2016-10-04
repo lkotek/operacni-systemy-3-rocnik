@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Operační systémy (OSY)</title>
-<date>2016-09-19</date>
+<date>2016-10-04</date>
 </info>
 <preface>
 <title></title>
@@ -24,7 +24,7 @@
 <simpara>Virtualizační technologie, cloud computing  [<link xl:href="02-virtualizace-cloudy/02-virtualizace-cloudy.html">html</link>] [<link xl:href="02-virtualizace-cloudy/02-virtualizace-cloudy.pdf">pdf</link>] [<link xl:href="02-virtualizace-cloudy/02-virtualizace-cloudy.adoc">asciidoc</link>]</simpara>
 </listitem>
 <listitem>
-<simpara>TO DO :-)</simpara>
+<simpara>MS Windows Server&#8201;&#8212;&#8201;nároky, licence, edice a role  [<link xl:href="03-ms-windows-server/03-ms-windows-server.html">html</link>] [<link xl:href="03-ms-windows-server/03-ms-windows-server.pdf">pdf</link>] [<link xl:href="03-ms-windows-server/03-ms-windows-server.adoc">asciidoc</link>]</simpara>
 </listitem>
 </orderedlist>
 </chapter>

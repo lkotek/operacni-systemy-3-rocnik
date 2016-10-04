@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>MS Windows Server&#8201;&#8212;&#8201;nároky, licence, edice a role</title>
+<date>2016-10-04</date>
+</info>
+<preface>
+<title></title>
+<simpara>&#169; Lukáš Kotek, <link xl:href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</link></simpara>
+<simpara><?asciidoc-pagebreak?></simpara>
+</preface>
+<chapter xml:id="_ms_windows_server">
+<title>MS Windows Server</title>
+<section xml:id="_definice">
+<title>Definice</title>
+<blockquote>
+<attribution>
+<link xl:href="https://en.wikipedia.org/wiki/Windows_Server">Zdroj: en.wikipedia.org</link>
+</attribution>
+<simpara>Windows Server is a brand name for a group of server operating systems released by Microsoft. It includes all Windows operating systems branded "Windows Server", but not any other Microsoft product. The first Windows server edition to be released under that brand was Windows Server 2003.</simpara>
+</blockquote>
+<important>
+<simpara><emphasis role="strong">Jak tomu rozumět?</emphasis> Vlastně špatně (nadsázka). MS Windows Server je řada několika operačních systémů, která se liší v edicích (a na to navázaných rolích). Říci lze ale jedno: Je to serverový operační systém, který implementuje práci s mnoha síťovými protokoly. A který poskytuje (právě pomocí zmíněných rolí) řadu služeb důležitých v počítačových sítích, ať již se jedná o role DNS a DHCP serveru nebo <emphasis role="strong">Active Directory</emphasis>.</simpara>
+</important>
+</section>
+<section xml:id="_systémové_nároky">
+<title>Systémové nároky</title>
+<simpara>Budemeli vztahovat systémové nároky k aktuálně asi nejvíce zažité verzi MS Windows Serveru (verzi 2012 R2), <link xl:href="https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&amp;MSPPError=-2147217396">zjistíme</link> následující.</simpara>
+<itemizedlist>
+<title>Potřebujeme:</title>
+<listitem>
+<simpara>1,4 GHz 64bitový procecor (všechny edice jsou již delší dobu <emphasis role="strong">64bitové</emphasis>)</simpara>
+</listitem>
+<listitem>
+<simpara>512 MB RAM</simpara>
+</listitem>
+<listitem>
+<simpara>32 GB místa na pevném disku</simpara>
+</listitem>
+<listitem>
+<simpara>síťový adaptér</simpara>
+</listitem>
+<listitem>
+<simpara>DVD mechaniku</simpara>
+</listitem>
+</itemizedlist>
+<warning>
+<simpara>Pozor, každá z edic MS Windows Serveru řeší také <emphasis role="strong">maximální povolený hardware</emphasis> (!).</simpara>
+</warning>
+</section>
+<section xml:id="_vývojový_model">
+<title>Vývojový model</title>
+<simpara>Každá z verzí MS Windows Serveru je vyvíjena paralelně s desktopovou verzí Windows. Sdílejí spolu mnoho systémových komponent, ze kterých je jistě nejvýznamější jádro. Podívejte se níže na výřez z <link xl:href="https://en.wikipedia.org/wiki/Windows_NT">tabulky</link>:</simpara>
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="33.3333*"/>
+<colspec colname="col_2" colwidth="33.3333*"/>
+<colspec colname="col_3" colwidth="33.3334*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Verze jádra Windows</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Desktopová verze</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Serverová verze</emphasis></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>NT 6.0</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows Vista</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows Server 2008</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>NT 6.1</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows 7</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows Server 2008 R2</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>NT 6.2</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows 8</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows Server 2012</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>NT 6.3</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows 8.1</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows Server 2012 R2</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>NT 10.0</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows 10</simpara></entry>
+<entry align="left" valign="top"><simpara>Windows Server 2016</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+</section>
+<section xml:id="_licencování_ms_windows_serveru">
+<title>Licencování MS Windows Serveru</title>
+<section xml:id="_co_musíme_zohlednit">
+<title>Co musíme zohlednit?</title>
+<itemizedlist>
+<listitem>
+<simpara>Samotnou <emphasis role="strong">cenu za licenci</emphasis> MS Windows Serveru</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Cenu za uživatele (nebo zařízení)</emphasis>, kteří se budou k serveru připojovat</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_Čím_se_liší_edice_ms_windows_serveru">
+<title>Čím se liší edice MS Windows Serveru?</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Cenou samotné licence</simpara>
+</listitem>
+<listitem>
+<simpara>Poskytovanou funkcionalitou (rolemi)</simpara>
+</listitem>
+<listitem>
+<simpara>Licenčními omezeními</simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>Hardware (viz dále)</simpara>
+</listitem>
+<listitem>
+<simpara>Počtem uživatelů a zařízení, pro které jsou funkce serveru poskytovány</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_co_je_to_cal">
+<title>Co je to CAL?</title>
+<tip>
+<simpara>Zkratka znamená <emphasis role="strong">C</emphasis>lient <emphasis role="strong">A</emphasis>ccess <emphasis role="strong">L</emphasis>icence.</simpara>
+</tip>
+<formalpara>
+<title>Varianta "Per User":</title>
+<para>Pořizujeme množství licencí <emphasis role="strong">pro uživatele</emphasis>, kteří se budou připojovat k serveru. Lze nakoupit po balíčcích.</para>
+</formalpara>
+<formalpara>
+<title>Varianta "Per Client":</title>
+<para>Pořizujeme licence <emphasis role="strong">pro zařízení</emphasis>, která se budou připojovat k danému serveru (opět, lze nakoupit po balíčcích).</para>
+</formalpara>
+<tip>
+<simpara>Slovo <emphasis>client</emphasis> je zde použito v konzervativním významu poplatném světu informačních technologií. Vzpoměňte na architekturu <emphasis role="strong">klient-server</emphasis>. Není to člověk, je to zařízení.</simpara>
+</tip>
+<note>
+<simpara><emphasis role="strong">Otázka na tělo:</emphasis> Co se vyplatí v organizaci používající <emphasis role="strong">100 počítačů</emphasis> a mající <emphasis role="strong">600 uživatelů</emphasis> PC? (&#8230;&#8203;) Ano, správně je to CAL typu "Per Client".</simpara>
+</note>
+</section>
+</section>
+<section xml:id="_vybrané_edice_ms_windows_serveru_2012_r2">
+<title>Vybrané edice MS Windows Serveru 2012 R2</title>
+<section xml:id="_foundation">
+<title>Foundation</title>
+<simpara>Základní <emphasis role="strong">velmi limitovaná</emphasis> (např. počtem SMB spojení, možností práce v doméně), ale i levná, edice. V základu zahrnuje určité množství uživatelů. Vhodná např. do (nej)menších firem.</simpara>
+</section>
+<section xml:id="_essentials">
+<title>Essentials</title>
+<simpara>Méně omezená edice (odpadá drastický limit na SMB spojení). Opět obsahuje množství uživatelů již v základu. Vhodné využití je v menších firmách.</simpara>
+</section>
+<section xml:id="_standard">
+<title>Standard</title>
+<simpara>Obecně použitelná edice, jak po stránce funkcí, tak po stránce výrazně navýšených maximálních povolených parametrů hardware. Pozor, <emphasis role="strong">CAL v základu nejsou obsaženy</emphasis>, je nutné je dokoupit.</simpara>
+</section>
+<section xml:id="_datacenter">
+<title>Datacenter</title>
+<simpara>Nejvyšší dostupné edice v rámci MS Windows Serveru 2012 R2, název výrazně vypovídá. I zde je nutné dokoupit CAL.</simpara>
+</section>
+</section>
+<section xml:id="_co_zohlednit_při_výběru_edice_ms_windows_serveru">
+<title>Co zohlednit při výběru edice MS Windows Serveru?</title>
+<itemizedlist>
+<listitem>
+<simpara>Licenční omezení ohledně hardware (primárně operační paměti a počtu socketů pro procesory u serveru) a limitů poskytovaných služeb (například omezení počtu souběžných připojení protokolem SMB).</simpara>
+</listitem>
+</itemizedlist>
+<tip>
+<simpara>Vzpomínáte na protokol SMB aka <emphasis role="strong">S</emphasis>erver <emphasis role="strong">M</emphasis>essage <emphasis role="strong">B</emphasis>lock? Jedná se o protokol, který umožňuje sdílení protředků (tzn. souborů, složek, tiskáren apod.) v sítích používajících MS Windows. Na GNU/Linuxu práci s ním implementuje software Samba.</simpara>
+</tip>
+<note>
+<simpara>Přehledně je to shrnuto v následující <link xl:href="http://www.microsoft.com/en-us/download/details.aspx?id=41703&amp;WT.mc_id=rss_alldownloads_all">tabulce</link>.</simpara>
+</note>
+<itemizedlist>
+<listitem>
+<simpara>Poskytované role v rámci edice (opět viz výše  zmíněná tabulka)</simpara>
+</listitem>
+</itemizedlist>
+<tip>
+<simpara>Nehledejte v tom složitost. Co role, to poskytovaná funkcionalita v rámci serveru. Mnoho jich znáte, vzpoměňte na různé síťové služby. DHCP, DNS, pošta, webserver, souborový server? Vše jsou role MS Windows Serveru, pod než spadají různé dílčí služby.</simpara>
+</tip>
+</section>
+</chapter>
+<chapter xml:id="_klíčové_pojmy">
+<title>Klíčové pojmy</title>
+<simpara>MS Windows Server, nároky, edice, role, licence, CAL, per user, per client, jádro NT</simpara>
+</chapter>
+<chapter xml:id="_použité_zdroje">
+<title>Použité zdroje</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara><link xl:href="https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&amp;MSPPError=-2147217396">https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&amp;MSPPError=-2147217396</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="https://en.wikipedia.org/wiki/Windows_Server">https://en.wikipedia.org/wiki/Windows_Server</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.microsoft.com/en-us/download/details.aspx?id=41703&amp;WT.mc_id=rss_alldownloads_all">http://www.microsoft.com/en-us/download/details.aspx?id=41703&amp;WT.mc_id=rss_alldownloads_all</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="https://en.wikipedia.org/wiki/Windows_NT">https://en.wikipedia.org/wiki/Windows_NT</link></simpara>
+</listitem>
+</orderedlist>
+</chapter>
+<chapter xml:id="_kam_dál">
+<title>Kam dál?</title>
+<itemizedlist>
+<title>Na jaké lepší místo se podívat než na oficiální dokumentaci Microsftu?</title>
+<listitem>
+<simpara><link xl:href="https://msdn.microsoft.com/en-us/library/dn636873(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/dn636873(v=vs.85).aspx</link></simpara>
+</listitem>
+</itemizedlist>
+<simpara><?asciidoc-hr?></simpara>
+<itemizedlist>
+<listitem>
+<simpara>Přehled kapitol: [<link xl:href="../README.html">html</link>] [<link xl:href="../README.pdf">pdf</link>] [<link xl:href="../README.asciidoc">asciidoc</link>]</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+</book>

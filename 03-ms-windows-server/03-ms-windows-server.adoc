@@ -6,23 +6,137 @@
 
 (C) Lukáš Kotek, link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
 
-NOTE: Tento dokument je *NEHOTOVÁ* prázdná šablona. Materiály budou v rámci roku průběžně doplňovány.
-
 <<<
+
+== MS Windows Server
+=== Definice
+
+[quote, 'https://en.wikipedia.org/wiki/Windows_Server[Zdroj: en.wikipedia.org]']
+____
+Windows Server is a brand name for a group of server operating systems released by Microsoft. It includes all Windows operating systems branded "Windows Server", but not any other Microsoft product. The first Windows server edition to be released under that brand was Windows Server 2003.
+____
+
+IMPORTANT: *Jak tomu rozumět?* Vlastně špatně (nadsázka). MS Windows Server je řada několika operačních systémů, která se liší v edicích (a na to navázaných rolích). Říci lze ale jedno: Je to serverový operační systém, který implementuje práci s mnoha síťovými protokoly. A který poskytuje (právě pomocí zmíněných rolí) řadu služeb důležitých v počítačových sítích, ať již se jedná o role DNS a DHCP serveru nebo *Active Directory*.
+
+=== Systémové nároky
+
+Budemeli vztahovat systémové nároky k aktuálně asi nejvíce zažité verzi MS Windows Serveru (verzi 2012 R2), https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&MSPPError=-2147217396[zjistíme] následující.
+
+.Potřebujeme:
+
+* 1,4 GHz 64bitový procecor (všechny edice jsou již delší dobu *64bitové*)
+* 512 MB RAM
+* 32 GB místa na pevném disku
+* síťový adaptér
+* DVD mechaniku
+
+WARNING: Pozor, každá z edic MS Windows Serveru řeší také *maximální povolený hardware* (!).
+
+=== Vývojový model
+
+Každá z verzí MS Windows Serveru je vyvíjena paralelně s desktopovou verzí Windows. Sdílejí spolu mnoho systémových komponent, ze kterých je jistě nejvýznamější jádro. Podívejte se níže na výřez z https://en.wikipedia.org/wiki/Windows_NT[tabulky]:
+
+|===
+| *Verze jádra Windows* | *Desktopová verze* | *Serverová verze*
+| NT 6.0
+| Windows Vista
+| Windows Server 2008
+
+| NT 6.1
+| Windows 7
+| Windows Server 2008 R2
+
+| NT 6.2
+| Windows 8
+| Windows Server 2012
+
+| NT 6.3
+| Windows 8.1
+| Windows Server 2012 R2
+
+| NT 10.0
+| Windows 10
+| Windows Server 2016
+|===
+
+
+=== Licencování MS Windows Serveru
+==== Co musíme zohlednit?
+
+* Samotnou *cenu za licenci* MS Windows Serveru
+* *Cenu za uživatele (nebo zařízení)*, kteří se budou k serveru připojovat
+
+==== Čím se liší edice MS Windows Serveru?
+
+. Cenou samotné licence
+. Poskytovanou funkcionalitou (rolemi)
+. Licenčními omezeními
+.. Hardware (viz dále)
+.. Počtem uživatelů a zařízení, pro které jsou funkce serveru poskytovány 
+
+==== Co je to CAL?
+
+TIP: Zkratka znamená **C**lient **A**ccess **L**icence.
+
+.Varianta "Per User":
+
+Pořizujeme množství licencí *pro uživatele*, kteří se budou připojovat k serveru. Lze nakoupit po balíčcích.
+
+.Varianta "Per Client":
+
+Pořizujeme licence *pro zařízení*, která se budou připojovat k danému serveru (opět, lze nakoupit po balíčcích).
+
+TIP: Slovo __client__ je zde použito v konzervativním významu poplatném světu informačních technologií. Vzpoměňte na architekturu *klient-server*. Není to člověk, je to zařízení.
+
+NOTE: *Otázka na tělo:* Co se vyplatí v organizaci používající *100 počítačů* a mající *600 uživatelů* PC? (...) Ano, správně je to CAL typu "Per Client".
+
+=== Vybrané edice MS Windows Serveru 2012 R2
+
+==== Foundation
+
+Základní *velmi limitovaná* (např. počtem SMB spojení, možností práce v doméně), ale i levná, edice. V základu zahrnuje určité množství uživatelů. Vhodná např. do (nej)menších firem.
+
+==== Essentials
+
+Méně omezená edice (odpadá drastický limit na SMB spojení). Opět obsahuje množství uživatelů již v základu. Vhodné využití je v menších firmách.
+
+==== Standard
+
+Obecně použitelná edice, jak po stránce funkcí, tak po stránce výrazně navýšených maximálních povolených parametrů hardware. Pozor, *CAL v základu nejsou obsaženy*, je nutné je dokoupit.
+
+==== Datacenter
+
+Nejvyšší dostupné edice v rámci MS Windows Serveru 2012 R2, název výrazně vypovídá. I zde je nutné dokoupit CAL.
+
+=== Co zohlednit při výběru edice MS Windows Serveru?
+
+* Licenční omezení ohledně hardware (primárně operační paměti a počtu socketů pro procesory u serveru) a limitů poskytovaných služeb (například omezení počtu souběžných připojení protokolem SMB).
+
+TIP: Vzpomínáte na protokol SMB aka **S**erver **M**essage **B**lock? Jedná se o protokol, který umožňuje sdílení protředků (tzn. souborů, složek, tiskáren apod.) v sítích používajících MS Windows. Na GNU/Linuxu práci s ním implementuje software Samba.
+
+NOTE: Přehledně je to shrnuto v následující http://www.microsoft.com/en-us/download/details.aspx?id=41703&WT.mc_id=rss_alldownloads_all[tabulce].
+
+* Poskytované role v rámci edice (opět viz výše  zmíněná tabulka)
+
+TIP: Nehledejte v tom složitost. Co role, to poskytovaná funkcionalita v rámci serveru. Mnoho jich znáte, vzpoměňte na různé síťové služby. DHCP, DNS, pošta, webserver, souborový server? Vše jsou role MS Windows Serveru, pod než spadají různé dílčí služby.
 
 == Klíčové pojmy
 
-TODO
+MS Windows Server, nároky, edice, role, licence, CAL, per user, per client, jádro NT
 
 == Použité zdroje
 
-TODO
+. https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&MSPPError=-2147217396
+. https://en.wikipedia.org/wiki/Windows_Server
+. http://www.microsoft.com/en-us/download/details.aspx?id=41703&WT.mc_id=rss_alldownloads_all
+. https://en.wikipedia.org/wiki/Windows_NT
 
 == Kam dál?
 
-TODO
+.Na jaké lepší místo se podívat než na oficiální dokumentaci Microsftu?
+* https://msdn.microsoft.com/en-us/library/dn636873(v=vs.85).aspx
 
 ---
 
-- Přehled kapitol: [link:../README.html[html]] [link:../README.md[asciidoc]]
+- Přehled kapitol: [link:../README.html[html]] [link:../README.pdf[pdf]] [link:../README.asciidoc[asciidoc]]
 

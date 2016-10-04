@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Operační systémy (OSY)</title>
+<title>MS Windows Server&#8201;&#8212;&#8201;nároky, licence, edice a role</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -511,13 +511,202 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="book">
 <div id="header">
-<h1>Operační systémy (OSY)</h1>
+<h1>MS Windows Server&#8201;&#8212;&#8201;nároky, licence, edice a role</h1>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>&#169; Lukáš Kotek <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></p>
+<p>&#169; Lukáš Kotek, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ms_windows_server">MS Windows Server</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_definice">Definice</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Windows Server is a brand name for a group of server operating systems released by Microsoft. It includes all Windows operating systems branded "Windows Server", but not any other Microsoft product. The first Windows server edition to be released under that brand was Windows Server 2003.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; <a href="https://en.wikipedia.org/wiki/Windows_Server">Zdroj: en.wikipedia.org</a>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<strong>Jak tomu rozumět?</strong> Vlastně špatně (nadsázka). MS Windows Server je řada několika operačních systémů, která se liší v edicích (a na to navázaných rolích). Říci lze ale jedno: Je to serverový operační systém, který implementuje práci s mnoha síťovými protokoly. A který poskytuje (právě pomocí zmíněných rolí) řadu služeb důležitých v počítačových sítích, ať již se jedná o role DNS a DHCP serveru nebo <strong>Active Directory</strong>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_systémové_nároky">Systémové nároky</h3>
+<div class="paragraph">
+<p>Budemeli vztahovat systémové nároky k aktuálně asi nejvíce zažité verzi MS Windows Serveru (verzi 2012 R2), <a href="https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&amp;MSPPError=-2147217396">zjistíme</a> následující.</p>
+</div>
+<div class="ulist">
+<div class="title">Potřebujeme:</div>
+<ul>
+<li>
+<p>1,4 GHz 64bitový procecor (všechny edice jsou již delší dobu <strong>64bitové</strong>)</p>
+</li>
+<li>
+<p>512 MB RAM</p>
+</li>
+<li>
+<p>32 GB místa na pevném disku</p>
+</li>
+<li>
+<p>síťový adaptér</p>
+</li>
+<li>
+<p>DVD mechaniku</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Pozor, každá z edic MS Windows Serveru řeší také <strong>maximální povolený hardware</strong> (!).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vývojový_model">Vývojový model</h3>
+<div class="paragraph">
+<p>Každá z verzí MS Windows Serveru je vyvíjena paralelně s desktopovou verzí Windows. Sdílejí spolu mnoho systémových komponent, ze kterých je jistě nejvýznamější jádro. Podívejte se níže na výřez z <a href="https://en.wikipedia.org/wiki/Windows_NT">tabulky</a>:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verze jádra Windows</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Desktopová verze</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Serverová verze</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NT 6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Vista</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server 2008</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NT 6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server 2008 R2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NT 6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server 2012</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NT 6.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server 2012 R2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NT 10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server 2016</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_licencování_ms_windows_serveru">Licencování MS Windows Serveru</h3>
+<div class="sect3">
+<h4 id="_co_musíme_zohlednit">Co musíme zohlednit?</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Samotnou <strong>cenu za licenci</strong> MS Windows Serveru</p>
+</li>
+<li>
+<p><strong>Cenu za uživatele (nebo zařízení)</strong>, kteří se budou k serveru připojovat</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_Čím_se_liší_edice_ms_windows_serveru">Čím se liší edice MS Windows Serveru?</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cenou samotné licence</p>
+</li>
+<li>
+<p>Poskytovanou funkcionalitou (rolemi)</p>
+</li>
+<li>
+<p>Licenčními omezeními</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Hardware (viz dále)</p>
+</li>
+<li>
+<p>Počtem uživatelů a zařízení, pro které jsou funkce serveru poskytovány</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_co_je_to_cal">Co je to CAL?</h4>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Zkratka znamená <strong>C</strong>lient <strong>A</strong>ccess <strong>L</strong>icence.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Varianta "Per User":</div>
+<p>Pořizujeme množství licencí <strong>pro uživatele</strong>, kteří se budou připojovat k serveru. Lze nakoupit po balíčcích.</p>
+</div>
+<div class="paragraph">
+<div class="title">Varianta "Per Client":</div>
+<p>Pořizujeme licence <strong>pro zařízení</strong>, která se budou připojovat k danému serveru (opět, lze nakoupit po balíčcích).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Slovo <em>client</em> je zde použito v konzervativním významu poplatném světu informačních technologií. Vzpoměňte na architekturu <strong>klient-server</strong>. Není to člověk, je to zařízení.
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -526,36 +715,149 @@ table.CodeRay td.code>pre{padding:0}
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Tento dokument nemá ambici v žádném slova smyslu suplovat technickou dokumentaci, odborné publikace nebo učebnice, které se komplexně zabývají problematikou operačních systémů a síťování. Je základní osnovou a rozcestníkem směřujícím na další materiály vytvořeným pro účely středoškolského předmětu <em>Operační systémy</em>. Předmět se zabývá problematikou operačních systémů obecně, základy správy MS Windows Serveru, posléze pak principy a použitím GNU/Linuxu, jeho konfigurací a nastavením jednotlivých síťových služeb.
+<strong>Otázka na tělo:</strong> Co se vyplatí v organizaci používající <strong>100 počítačů</strong> a mající <strong>600 uživatelů</strong> PC? (&#8230;&#8203;) Ano, správně je to CAL typu "Per Client".
 </td>
 </tr>
 </table>
 </div>
-<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vybrané_edice_ms_windows_serveru_2012_r2">Vybrané edice MS Windows Serveru 2012 R2</h3>
+<div class="sect3">
+<h4 id="_foundation">Foundation</h4>
+<div class="paragraph">
+<p>Základní <strong>velmi limitovaná</strong> (např. počtem SMB spojení, možností práce v doméně), ale i levná, edice. V základu zahrnuje určité množství uživatelů. Vhodná např. do (nej)menších firem.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_essentials">Essentials</h4>
+<div class="paragraph">
+<p>Méně omezená edice (odpadá drastický limit na SMB spojení). Opět obsahuje množství uživatelů již v základu. Vhodné využití je v menších firmách.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_standard">Standard</h4>
+<div class="paragraph">
+<p>Obecně použitelná edice, jak po stránce funkcí, tak po stránce výrazně navýšených maximálních povolených parametrů hardware. Pozor, <strong>CAL v základu nejsou obsaženy</strong>, je nutné je dokoupit.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_datacenter">Datacenter</h4>
+<div class="paragraph">
+<p>Nejvyšší dostupné edice v rámci MS Windows Serveru 2012 R2, název výrazně vypovídá. I zde je nutné dokoupit CAL.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_co_zohlednit_při_výběru_edice_ms_windows_serveru">Co zohlednit při výběru edice MS Windows Serveru?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Licenční omezení ohledně hardware (primárně operační paměti a počtu socketů pro procesory u serveru) a limitů poskytovaných služeb (například omezení počtu souběžných připojení protokolem SMB).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Vzpomínáte na protokol SMB aka <strong>S</strong>erver <strong>M</strong>essage <strong>B</strong>lock? Jedná se o protokol, který umožňuje sdílení protředků (tzn. souborů, složek, tiskáren apod.) v sítích používajících MS Windows. Na GNU/Linuxu práci s ním implementuje software Samba.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Přehledně je to shrnuto v následující <a href="http://www.microsoft.com/en-us/download/details.aspx?id=41703&amp;WT.mc_id=rss_alldownloads_all">tabulce</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Poskytované role v rámci edice (opět viz výše  zmíněná tabulka)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Nehledejte v tom složitost. Co role, to poskytovaná funkcionalita v rámci serveru. Mnoho jich znáte, vzpoměňte na různé síťové služby. DHCP, DNS, pošta, webserver, souborový server? Vše jsou role MS Windows Serveru, pod než spadají různé dílčí služby.
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_podklady">Podklady</h2>
+<h2 id="_klíčové_pojmy">Klíčové pojmy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>MS Windows Server, nároky, edice, role, licence, CAL, per user, per client, jádro NT</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_použité_zdroje">Použité zdroje</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Operační systémy&#8201;&#8212;&#8201;účel, rozdělení a typy jader [<a href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.html">html</a>] [<a href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.pdf">pdf</a>] [<a href="01-ucel-rozdeleni-jadra/01-ucel-rozdeleni-jadra.adoc">asciidoc</a>]</p>
+<p><a href="https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&amp;MSPPError=-2147217396" class="bare">https://technet.microsoft.com/en-us/library/dn303418%28v=ws.11%29.aspx?f=255&amp;MSPPError=-2147217396</a></p>
 </li>
 <li>
-<p>Virtualizační technologie, cloud computing  [<a href="02-virtualizace-cloudy/02-virtualizace-cloudy.html">html</a>] [<a href="02-virtualizace-cloudy/02-virtualizace-cloudy.pdf">pdf</a>] [<a href="02-virtualizace-cloudy/02-virtualizace-cloudy.adoc">asciidoc</a>]</p>
+<p><a href="https://en.wikipedia.org/wiki/Windows_Server" class="bare">https://en.wikipedia.org/wiki/Windows_Server</a></p>
 </li>
 <li>
-<p>MS Windows Server&#8201;&#8212;&#8201;nároky, licence, edice a role  [<a href="03-ms-windows-server/03-ms-windows-server.html">html</a>] [<a href="03-ms-windows-server/03-ms-windows-server.pdf">pdf</a>] [<a href="03-ms-windows-server/03-ms-windows-server.adoc">asciidoc</a>]</p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=41703&amp;WT.mc_id=rss_alldownloads_all" class="bare">http://www.microsoft.com/en-us/download/details.aspx?id=41703&amp;WT.mc_id=rss_alldownloads_all</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Windows_NT" class="bare">https://en.wikipedia.org/wiki/Windows_NT</a></p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kam_dál">Kam dál?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">Na jaké lepší místo se podívat než na oficiální dokumentaci Microsftu?</div>
+<ul>
+<li>
+<p><a href="https://msdn.microsoft.com/en-us/library/dn636873(v=vs.85).aspx" class="bare">https://msdn.microsoft.com/en-us/library/dn636873(v=vs.85).aspx</a></p>
+</li>
+</ul>
+</div>
+<hr>
+<div class="ulist">
+<ul>
+<li>
+<p>Přehled kapitol: [<a href="../README.html">html</a>] [<a href="../README.pdf">pdf</a>] [<a href="../README.asciidoc">asciidoc</a>]</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-04 17:00:27 CEST
+Last updated 2016-10-04 17:46:20 CEST
 </div>
 </div>
 </body>
