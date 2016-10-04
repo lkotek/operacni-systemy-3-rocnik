@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Virtualizační technologie, cloud computing</title>
-<date>2016-09-21</date>
+<date>2016-10-04</date>
 </info>
 <preface>
 <title></title>
@@ -213,7 +213,7 @@
 <simpara>ARMový CPU tak může být emulován v prostředí systému MS Windows zkompilovaného pro x86 instrukční sadu.</simpara>
 </tip>
 <note>
-<simpara>Příklady:  Android mobile device emulator (v rámci ADT), DOSBox, QUEMU, Xbox emulator</simpara>
+<simpara>Příklady:  Android mobile device emulator (v rámci ADT), DOSBox, QEMU, Xbox emulator</simpara>
 </note>
 </section>
 <section xml:id="_paravirtualizace_částečná_virtualizace">
