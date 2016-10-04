@@ -16,5 +16,5 @@ NOTE: Tento dokument nemá ambici v žádném slova smyslu suplovat technickou d
 
 . Virtualizační technologie, cloud computing  [link:02-virtualizace-cloudy/02-virtualizace-cloudy.html[html]] [link:02-virtualizace-cloudy/02-virtualizace-cloudy.pdf[pdf]] [link:02-virtualizace-cloudy/02-virtualizace-cloudy.adoc[asciidoc]]
 
-. TO DO :-)
+. TO BE DONE :-)
 
