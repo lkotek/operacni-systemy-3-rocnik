@@ -6,17 +6,79 @@
 
 (C) Lukáš Kotek, link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0]
 
-NOTE: Tento dokument je *NEHOTOVÁ* prázdná šablona. Materiály budou v rámci roku průběžně doplňovány.
-
 <<<
+
+== Co je to role serveru?
+=== Definice
+
+Role serveru je sada software se specifickou funkcionalitou, která odráží způsob použití, služby a funkce, které chceme na Windows serveru provozovat. Každá role serveru může sestávat z řady dalších služeb. Role serveru na sobě také *mohou záviset* (jedna role může pro svůj provoz vyžadovat další roli).
+
+NOTE: Např. VPN, souborový server, tiskový server apod.
+
+.Na Windows serveru tedy lze:
+* Instalovat a používat jednu či více rolí
+* Vzájemně kombinovat jednotlivé role
+
+=== Způsob instalace rolí
+
+Existují tři  základní způsoby:
+
+. pomocí rozhraní systému Windows 
+.. nástroj používající GUI *Správa serveru* (Server manager)
+. pomocí *příkazového řádku* 
+.. klasické textové prostředí (ServerManagerCmd.exe)
+. pomocí prostředí *Windows PowerShell* 
+.. textové prostředí umožňující pokročilé skriptování 
+.. poprvé obsaženo ve MS Windows Serveru 2008
+
+TIP: U posledních dvou možností je nutné okno terminálu (cmd.exe) *spustit s právy správce* (viz volba _Spustit jako správce_).
+
+=== Postup přidání rolí
+
+.Přidání role (služby, funkce) pomocí GUI nástroje:
+. Spustit Správu serveru (Server manager)
+. Vyberte položku Přidat role (Add roles)
+. Vyberte role, které chcete nainstalovat a pokračujte pomocí tlačítka další (Next)
++
+TIP: Např. Active Directory Domain Services
++
+
+. Zkontrolujte a potvrďte zbývající volby
+
+WARNING: Jak u příkazového řádku?
+
+== Základní druhy rolí
+
+Můžeme rozlišit například:
+
+* Role souborového serveru
+* Role tiskového serveru
+* Role aplikačního serveru
+* Role e-mailového serveru
+* Role terminálového serveru
+* Role serveru multimediálních datových proudů
+* Role serveru WINS (tzv. Windows Internet Name Service)
+* Role serveru vzdáleného přístupu nebo virtuální privátní sítě (VPN)
+* Role řadiče domény
+* Role serveru DNS
+* Role serveru DHCP
+* A mnoho dalších...
+
+WARNING: Účel jednotlivých rolí?
+WARNING: Jaké jsou přesné názvy rolí?
+
 
 == Klíčové pojmy
 
-TODO
+role, služba, server manager, power shell,  cmd, 
 
 == Použité zdroje
 
-TODO
+. http://technet.microsoft.com/cs-cz/library/cc732263.aspx#BKMK_roles
+. http://technet.microsoft.com/en-us/library/cc732131%28v=ws.10%29.aspx
+. http://technet.microsoft.com/cs-cz/library/cc756962%28v=ws.10%29.aspx
+. http://www.dummies.com/how-to/content/network-administration-roles-and-features-in-windo.html
+. http://www.mstv.cz/it
 
 == Kam dál?
 
@@ -24,5 +86,5 @@ TODO
 
 ---
 
-- Přehled kapitol: [link:../README.html[html]] [link:../README.md[asciidoc]]
+- Přehled kapitol: [link:../README.html[html]] [link:../README.pdf[pdf]] [link:../README.asciidoc[asciidoc]]
 
