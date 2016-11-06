@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Operační systémy (OSY)</title>
-<date>2016-10-04</date>
+<date>2016-11-06</date>
 </info>
 <preface>
 <title></title>
@@ -25,6 +25,9 @@
 </listitem>
 <listitem>
 <simpara>MS Windows Server&#8201;&#8212;&#8201;nároky, licence, edice a role  [<link xl:href="03-ms-windows-server/03-ms-windows-server.html">html</link>] [<link xl:href="03-ms-windows-server/03-ms-windows-server.pdf">pdf</link>] [<link xl:href="03-ms-windows-server/03-ms-windows-server.adoc">asciidoc</link>]</simpara>
+</listitem>
+<listitem>
+<simpara>Úvod do správy MS Windows Serveru  [<link xl:href="04-sprava-windows-serveru/04-sprava-windows-serveru.html">html</link>] [<link xl:href="04-sprava-windows-serveru/04-sprava-windows-serveru.pdf">pdf</link>] [<link xl:href="04-sprava-windows-serveru/04-sprava-windows-serveru.adoc">asciidoc</link>]</simpara>
 </listitem>
 </orderedlist>
 </chapter>

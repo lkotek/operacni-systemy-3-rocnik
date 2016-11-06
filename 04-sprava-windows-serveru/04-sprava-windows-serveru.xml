@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Úvod do správy MS Windows Serveru</title>
+<date>2016-11-06</date>
+</info>
+<preface>
+<title></title>
+<simpara>&#169; Lukáš Kotek, <link xl:href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</link></simpara>
+<simpara><?asciidoc-pagebreak?></simpara>
+</preface>
+<chapter xml:id="_co_je_to_role_serveru">
+<title>Co je to role serveru?</title>
+<section xml:id="_definice">
+<title>Definice</title>
+<simpara>Role serveru je sada software se specifickou funkcionalitou, která odráží způsob použití, služby a funkce, které chceme na Windows serveru provozovat. Každá role serveru může sestávat z řady dalších služeb. Role serveru na sobě také <emphasis role="strong">mohou záviset</emphasis> (jedna role může pro svůj provoz vyžadovat další roli).</simpara>
+<note>
+<simpara>Např. VPN, souborový server, tiskový server apod.</simpara>
+</note>
+<itemizedlist>
+<title>Na Windows serveru tedy lze:</title>
+<listitem>
+<simpara>Instalovat a používat jednu či více rolí</simpara>
+</listitem>
+<listitem>
+<simpara>Vzájemně kombinovat jednotlivé role</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_způsob_instalace_rolí">
+<title>Způsob instalace rolí</title>
+<simpara>Existují tři  základní způsoby:</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>pomocí rozhraní systému Windows</simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>nástroj používající GUI <emphasis role="strong">Správa serveru</emphasis> (Server manager)</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>pomocí <emphasis role="strong">příkazového řádku</emphasis></simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>klasické textové prostředí (ServerManagerCmd.exe)</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>pomocí prostředí <emphasis role="strong">Windows PowerShell</emphasis></simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>textové prostředí umožňující pokročilé skriptování</simpara>
+</listitem>
+<listitem>
+<simpara>poprvé obsaženo ve MS Windows Serveru 2008</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+<tip>
+<simpara>U posledních dvou možností je nutné okno terminálu (cmd.exe) <emphasis role="strong">spustit s právy správce</emphasis> (viz volba <emphasis>Spustit jako správce</emphasis>).</simpara>
+</tip>
+</section>
+<section xml:id="_postup_přidání_rolí">
+<title>Postup přidání rolí</title>
+<orderedlist numeration="arabic">
+<title>Přidání role (služby, funkce) pomocí GUI nástroje:</title>
+<listitem>
+<simpara>Spustit Správu serveru (Server manager)</simpara>
+</listitem>
+<listitem>
+<simpara>Vyberte položku Přidat role (Add roles)</simpara>
+</listitem>
+<listitem>
+<simpara>Vyberte role, které chcete nainstalovat a pokračujte pomocí tlačítka další (Next)</simpara>
+<tip>
+<simpara>Např. Active Directory Domain Services</simpara>
+</tip>
+</listitem>
+<listitem>
+<simpara>Zkontrolujte a potvrďte zbývající volby</simpara>
+</listitem>
+</orderedlist>
+<warning>
+<simpara>Jak u příkazového řádku?</simpara>
+</warning>
+</section>
+</chapter>
+<chapter xml:id="_základní_druhy_rolí">
+<title>Základní druhy rolí</title>
+<simpara>Můžeme rozlišit například:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Role souborového serveru</simpara>
+</listitem>
+<listitem>
+<simpara>Role tiskového serveru</simpara>
+</listitem>
+<listitem>
+<simpara>Role aplikačního serveru</simpara>
+</listitem>
+<listitem>
+<simpara>Role e-mailového serveru</simpara>
+</listitem>
+<listitem>
+<simpara>Role terminálového serveru</simpara>
+</listitem>
+<listitem>
+<simpara>Role serveru multimediálních datových proudů</simpara>
+</listitem>
+<listitem>
+<simpara>Role serveru WINS (tzv. Windows Internet Name Service)</simpara>
+</listitem>
+<listitem>
+<simpara>Role serveru vzdáleného přístupu nebo virtuální privátní sítě (VPN)</simpara>
+</listitem>
+<listitem>
+<simpara>Role řadiče domény</simpara>
+</listitem>
+<listitem>
+<simpara>Role serveru DNS</simpara>
+</listitem>
+<listitem>
+<simpara>Role serveru DHCP</simpara>
+</listitem>
+<listitem>
+<simpara>A mnoho dalších&#8230;&#8203;</simpara>
+</listitem>
+</itemizedlist>
+<warning>
+<simpara>Účel jednotlivých rolí?
+WARNING: Jaké jsou přesné názvy rolí?</simpara>
+</warning>
+</chapter>
+<chapter xml:id="_klíčové_pojmy">
+<title>Klíčové pojmy</title>
+<simpara>role, služba, server manager, power shell,  cmd,</simpara>
+</chapter>
+<chapter xml:id="_použité_zdroje">
+<title>Použité zdroje</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara><link xl:href="http://technet.microsoft.com/cs-cz/library/cc732263.aspx#BKMK_roles">http://technet.microsoft.com/cs-cz/library/cc732263.aspx#BKMK_roles</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://technet.microsoft.com/en-us/library/cc732131%28v=ws.10%29.aspx">http://technet.microsoft.com/en-us/library/cc732131%28v=ws.10%29.aspx</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://technet.microsoft.com/cs-cz/library/cc756962%28v=ws.10%29.aspx">http://technet.microsoft.com/cs-cz/library/cc756962%28v=ws.10%29.aspx</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.dummies.com/how-to/content/network-administration-roles-and-features-in-windo.html">http://www.dummies.com/how-to/content/network-administration-roles-and-features-in-windo.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.mstv.cz/it">http://www.mstv.cz/it</link></simpara>
+</listitem>
+</orderedlist>
+</chapter>
+<chapter xml:id="_kam_dál">
+<title>Kam dál?</title>
+<simpara>TODO</simpara>
+<simpara><?asciidoc-hr?></simpara>
+<itemizedlist>
+<listitem>
+<simpara>Přehled kapitol: [<link xl:href="../README.html">html</link>] [<link xl:href="../README.pdf">pdf</link>] [<link xl:href="../README.asciidoc">asciidoc</link>]</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+</book>

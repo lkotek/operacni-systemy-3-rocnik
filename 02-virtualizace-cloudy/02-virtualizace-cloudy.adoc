@@ -105,7 +105,7 @@ TIP: Jedná se až o násobně vyšší nároky na hardware (oproti nativnímu s
 
 TIP: ARMový CPU tak může být emulován v prostředí systému MS Windows zkompilovaného pro x86 instrukční sadu. 
 
-NOTE: Příklady:  Android mobile device emulator (v rámci ADT), DOSBox, QEMU, Xbox emulator
+NOTE: Příklady:  Android mobile device emulator (v rámci Android SDK od Google), DOSBox, QEMU, Xbox emulator
 
 === Paravirtualizace (částečná virtualizace)
 

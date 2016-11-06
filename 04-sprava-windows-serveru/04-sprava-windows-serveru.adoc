@@ -38,7 +38,7 @@ TIP: U posledních dvou možností je nutné okno terminálu (cmd.exe) *spustit 
 .Přidání role (služby, funkce) pomocí GUI nástroje:
 . Spustit Správu serveru (Server manager)
 . Vyberte položku Přidat role (Add roles)
-. Vyberte role, které chcete nainstalovat a pokračujte pomocí tlačítka další (Next)
+. Vyberte role, které chcete nainstalovat, a pokračujte pomocí tlačítka další (Next)
 +
 TIP: Např. Active Directory Domain Services
 +
@@ -82,7 +82,8 @@ role, služba, server manager, power shell,  cmd,
 
 == Kam dál?
 
-TODO
+.Jak je to s licencemi v MS Windows Serveru 2016
+* http://www.zive.cz/clanky/windows-server-2016-licencni-zmeny/sc-3-a-181431/default.aspx
 
 ---
 

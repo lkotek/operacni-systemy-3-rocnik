@@ -18,3 +18,6 @@ NOTE: Tento dokument nemá ambici v žádném slova smyslu suplovat technickou d
 
 . MS Windows Server -- nároky, licence, edice a role  [link:03-ms-windows-server/03-ms-windows-server.html[html]] [link:03-ms-windows-server/03-ms-windows-server.pdf[pdf]] [link:03-ms-windows-server/03-ms-windows-server.adoc[asciidoc]]
 
+. Úvod do správy MS Windows Serveru  [link:04-sprava-windows-serveru/04-sprava-windows-serveru.html[html]] [link:04-sprava-windows-serveru/04-sprava-windows-serveru.pdf[pdf]] [link:04-sprava-windows-serveru/04-sprava-windows-serveru.adoc[asciidoc]]
+
+. Active Directory -- pojmenování prvků dle LDAP [link:05-05-ldap-active-directory/05-05-ldap-active-directory.html[html]] [link:05-05-ldap-active-directory/05-05-ldap-active-directory.pdf[pdf]] [link:05-05-ldap-active-directory/05-05-ldap-active-directory.adoc[asciidoc]]
