@@ -70,7 +70,7 @@ WARNING: Jaké jsou přesné názvy rolí?
 
 == Klíčové pojmy
 
-role, služba, server manager, power shell,  cmd, 
+role, služba, server manager, power shell,  cmd
 
 == Použité zdroje
 

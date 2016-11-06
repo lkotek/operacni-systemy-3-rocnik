@@ -76,7 +76,7 @@
 <simpara>Vyberte položku Přidat role (Add roles)</simpara>
 </listitem>
 <listitem>
-<simpara>Vyberte role, které chcete nainstalovat a pokračujte pomocí tlačítka další (Next)</simpara>
+<simpara>Vyberte role, které chcete nainstalovat, a pokračujte pomocí tlačítka další (Next)</simpara>
 <tip>
 <simpara>Např. Active Directory Domain Services</simpara>
 </tip>
@@ -138,7 +138,7 @@ WARNING: Jaké jsou přesné názvy rolí?</simpara>
 </chapter>
 <chapter xml:id="_klíčové_pojmy">
 <title>Klíčové pojmy</title>
-<simpara>role, služba, server manager, power shell,  cmd,</simpara>
+<simpara>role, služba, server manager, power shell,  cmd</simpara>
 </chapter>
 <chapter xml:id="_použité_zdroje">
 <title>Použité zdroje</title>
@@ -162,7 +162,12 @@ WARNING: Jaké jsou přesné názvy rolí?</simpara>
 </chapter>
 <chapter xml:id="_kam_dál">
 <title>Kam dál?</title>
-<simpara>TODO</simpara>
+<itemizedlist>
+<title>Jak je to s licencemi v MS Windows Serveru 2016</title>
+<listitem>
+<simpara><link xl:href="http://www.zive.cz/clanky/windows-server-2016-licencni-zmeny/sc-3-a-181431/default.aspx">http://www.zive.cz/clanky/windows-server-2016-licencni-zmeny/sc-3-a-181431/default.aspx</link></simpara>
+</listitem>
+</itemizedlist>
 <simpara><?asciidoc-hr?></simpara>
 <itemizedlist>
 <listitem>
