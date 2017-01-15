@@ -21,3 +21,5 @@ NOTE: Tento dokument nemá ambici v žádném slova smyslu suplovat technickou d
 . Úvod do správy MS Windows Serveru  [link:04-sprava-windows-serveru/04-sprava-windows-serveru.html[html]] [link:04-sprava-windows-serveru/04-sprava-windows-serveru.pdf[pdf]] [link:04-sprava-windows-serveru/04-sprava-windows-serveru.adoc[asciidoc]]
 
 . Active Directory -- pojmenování prvků dle LDAP [link:05-05-ldap-active-directory/05-05-ldap-active-directory.html[html]] [link:05-05-ldap-active-directory/05-05-ldap-active-directory.pdf[pdf]] [link:05-05-ldap-active-directory/05-05-ldap-active-directory.adoc[asciidoc]]
+
+. GNU/Linux -- historie, pojmy a svobodný software [link:https://github.com/lukaskotek/operacni-systemy-4-rocnik/blob/master/02-linux-historie-pojmy-svobodny-software/02-linux-historie-pojmy-svobodny-software.html[html]] [link:https://github.com/lukaskotek/operacni-systemy-4-rocnik/blob/master/02-linux-historie-pojmy-svobodny-software/02-linux-historie-pojmy-svobodny-software.pdf[pdf]] [link:https://github.com/lukaskotek/operacni-systemy-4-rocnik/blob/master/02-linux-historie-pojmy-svobodny-software/02-linux-historie-pojmy-svobodny-software.adoc[asciidoc]]

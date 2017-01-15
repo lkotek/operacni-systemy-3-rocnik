@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Operační systémy&#8201;&#8212;&#8201;účel, rozdělení a typy jader</title>
-<date>2016-09-06</date>
+<date>2016-10-04</date>
 </info>
 <preface>
 <title></title>
@@ -246,9 +246,9 @@
 <title>Hybridní jádro, licence: public domain</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="mikro.png"/>
+<imagedata fileref="hybrid.png"/>
 </imageobject>
-<textobject><phrase>mikro</phrase></textobject>
+<textobject><phrase>hybrid</phrase></textobject>
 </mediaobject>
 </figure>
 </section>
